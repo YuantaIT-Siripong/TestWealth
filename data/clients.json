@@ -1,0 +1,92 @@
+[
+  {
+    "id": "CLI-001",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "+1-555-0101",
+    "status": "Active",
+    "registrationDate": "2023-01-15T00:00:00Z",
+    "lastActivityDate": "2023-11-10T14:30:00Z"
+  },
+  {
+    "id": "CLI-002",
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "phone": "+1-555-0102",
+    "status": "Active",
+    "registrationDate": "2023-02-20T00:00:00Z",
+    "lastActivityDate": "2023-11-12T09:15:00Z"
+  },
+  {
+    "id": "CLI-003",
+    "name": "Robert Johnson",
+    "email": "robert.johnson@example.com",
+    "phone": "+1-555-0103",
+    "status": "Active",
+    "registrationDate": "2023-03-10T00:00:00Z",
+    "lastActivityDate": "2023-11-08T16:45:00Z"
+  },
+  {
+    "id": "CLI-004",
+    "name": "Maria Garcia",
+    "email": "maria.garcia@example.com",
+    "phone": "+1-555-0104",
+    "status": "Active",
+    "registrationDate": "2023-04-05T00:00:00Z",
+    "lastActivityDate": "2023-11-11T11:20:00Z"
+  },
+  {
+    "id": "CLI-005",
+    "name": "David Chen",
+    "email": "david.chen@example.com",
+    "phone": "+1-555-0105",
+    "status": "Active",
+    "registrationDate": "2023-05-12T00:00:00Z",
+    "lastActivityDate": "2023-11-13T13:00:00Z"
+  },
+  {
+    "id": "CLI-006",
+    "name": "Sarah Williams",
+    "email": "sarah.williams@example.com",
+    "phone": "+1-555-0106",
+    "status": "Active",
+    "registrationDate": "2023-06-18T00:00:00Z",
+    "lastActivityDate": "2023-11-09T10:30:00Z"
+  },
+  {
+    "id": "CLI-007",
+    "name": "Michael Brown",
+    "email": "michael.brown@example.com",
+    "phone": "+1-555-0107",
+    "status": "Inactive",
+    "registrationDate": "2023-01-20T00:00:00Z",
+    "lastActivityDate": "2023-08-15T12:00:00Z"
+  },
+  {
+    "id": "CLI-008",
+    "name": "Emily Davis",
+    "email": "emily.davis@example.com",
+    "phone": "+1-555-0108",
+    "status": "Active",
+    "registrationDate": "2023-07-25T00:00:00Z",
+    "lastActivityDate": "2023-11-14T15:45:00Z"
+  },
+  {
+    "id": "CLI-009",
+    "name": "James Wilson",
+    "email": "james.wilson@example.com",
+    "phone": "+1-555-0109",
+    "status": "Active",
+    "registrationDate": "2023-08-30T00:00:00Z",
+    "lastActivityDate": "2023-11-07T08:20:00Z"
+  },
+  {
+    "id": "CLI-010",
+    "name": "Linda Martinez",
+    "email": "linda.martinez@example.com",
+    "phone": "+1-555-0110",
+    "status": "Active",
+    "registrationDate": "2023-09-14T00:00:00Z",
+    "lastActivityDate": "2023-11-13T17:30:00Z"
+  }
+]
