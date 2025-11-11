@@ -1,0 +1,1555 @@
+
+<!-- saved from url=(0014)about:internet -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wealth Product Order Processing</title>
+  <script src="./WealthOps_Full_files/saved_resource"></script>
+  <script src="./WealthOps_Full_files/lucide@latest"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .hidden { display: none; }
+    .active-nav { background-color: #eff6ff; color: #2563eb; border-right: 2px solid #2563eb; }
+    .modal-backdrop { background-color: rgba(0, 0, 0, 0.5); }
+    .tab-active { border-bottom: 2px solid #2563eb; color: #2563eb; }
+    .table-row:hover { background-color: #f9fafb; cursor: pointer; }
+    .toast { animation: slideIn 0.3s ease-out; }
+    @keyframes slideIn { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  </style>
+<link id="all-fonts-link-font-geist" rel="stylesheet" href="./WealthOps_Full_files/css2"><style id="all-fonts-style-font-geist">.font-geist { font-family: 'Geist', sans-serif !important; }</style><link id="all-fonts-link-font-roboto" rel="stylesheet" href="./WealthOps_Full_files/css2(1)"><style id="all-fonts-style-font-roboto">.font-roboto { font-family: 'Roboto', sans-serif !important; }</style><link id="all-fonts-link-font-montserrat" rel="stylesheet" href="./WealthOps_Full_files/css2(2)"><style id="all-fonts-style-font-montserrat">.font-montserrat { font-family: 'Montserrat', sans-serif !important; }</style><link id="all-fonts-link-font-poppins" rel="stylesheet" href="./WealthOps_Full_files/css2(3)"><style id="all-fonts-style-font-poppins">.font-poppins { font-family: 'Poppins', sans-serif !important; }</style><link id="all-fonts-link-font-playfair" rel="stylesheet" href="./WealthOps_Full_files/css2(4)"><style id="all-fonts-style-font-playfair">.font-playfair { font-family: 'Playfair Display', serif !important; }</style><link id="all-fonts-link-font-instrument-serif" rel="stylesheet" href="./WealthOps_Full_files/css2(5)"><style id="all-fonts-style-font-instrument-serif">.font-instrument-serif { font-family: 'Instrument Serif', serif !important; }</style><link id="all-fonts-link-font-merriweather" rel="stylesheet" href="./WealthOps_Full_files/css2(6)"><style id="all-fonts-style-font-merriweather">.font-merriweather { font-family: 'Merriweather', serif !important; }</style><link id="all-fonts-link-font-bricolage" rel="stylesheet" href="./WealthOps_Full_files/css2(7)"><style id="all-fonts-style-font-bricolage">.font-bricolage { font-family: 'Bricolage Grotesque', sans-serif !important; }</style><link id="all-fonts-link-font-jakarta" rel="stylesheet" href="./WealthOps_Full_files/css2(8)"><style id="all-fonts-style-font-jakarta">.font-jakarta { font-family: 'Plus Jakarta Sans', sans-serif !important; }</style><link id="all-fonts-link-font-manrope" rel="stylesheet" href="./WealthOps_Full_files/css2(9)"><style id="all-fonts-style-font-manrope">.font-manrope { font-family: 'Manrope', sans-serif !important; }</style><link id="all-fonts-link-font-space-grotesk" rel="stylesheet" href="./WealthOps_Full_files/css2(10)"><style id="all-fonts-style-font-space-grotesk">.font-space-grotesk { font-family: 'Space Grotesk', sans-serif !important; }</style><link id="all-fonts-link-font-work-sans" rel="stylesheet" href="./WealthOps_Full_files/css2(11)"><style id="all-fonts-style-font-work-sans">.font-work-sans { font-family: 'Work Sans', sans-serif !important; }</style><link id="all-fonts-link-font-pt-serif" rel="stylesheet" href="./WealthOps_Full_files/css2(12)"><style id="all-fonts-style-font-pt-serif">.font-pt-serif { font-family: 'PT Serif', serif !important; }</style><link id="all-fonts-link-font-geist-mono" rel="stylesheet" href="./WealthOps_Full_files/css2(13)"><style id="all-fonts-style-font-geist-mono">.font-geist-mono { font-family: 'Geist Mono', monospace !important; }</style><link id="all-fonts-link-font-space-mono" rel="stylesheet" href="./WealthOps_Full_files/css2(14)"><style id="all-fonts-style-font-space-mono">.font-space-mono { font-family: 'Space Mono', monospace !important; }</style><link id="all-fonts-link-font-quicksand" rel="stylesheet" href="./WealthOps_Full_files/css2(15)"><style id="all-fonts-style-font-quicksand">.font-quicksand { font-family: 'Quicksand', sans-serif !important; }</style><link id="all-fonts-link-font-nunito" rel="stylesheet" href="./WealthOps_Full_files/css2(16)"><style id="all-fonts-style-font-nunito">.font-nunito { font-family: 'Nunito', sans-serif !important; }</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.left-1\/2{left:50%}.left-3{left:0.75rem}.right-1{right:0.25rem}.right-4{right:1rem}.top-1{top:0.25rem}.top-1\/2{top:50%}.top-4{top:1rem}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-11{margin-left:2.75rem}.ml-2{margin-left:0.5rem}.ml-3{margin-left:0.75rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-6{margin-top:1.5rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.table-row{display:table-row}.grid{display:grid}.hidden{display:none}.h-12{height:3rem}.h-2{height:0.5rem}.h-24{height:6rem}.h-3{height:0.75rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-screen{height:100vh}.max-h-\[90vh\]{max-height:90vh}.min-h-screen{min-height:100vh}.w-12{width:3rem}.w-2{width:0.5rem}.w-3{width:0.75rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-64{width:16rem}.w-8{width:2rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-lg{max-width:32rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.-translate-x-1\/2{--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.-translate-y-1\/2{--tw-translate-y:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-not-allowed{cursor:not-allowed}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.space-x-1 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.25rem * var(--tw-space-x-reverse));margin-left:calc(0.25rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-2 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.5rem * var(--tw-space-x-reverse));margin-left:calc(0.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-3 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(0.75rem * var(--tw-space-x-reverse));margin-left:calc(0.75rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-1 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-gray-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(229 231 235 / var(--tw-divide-opacity, 1))}.overflow-auto{overflow:auto}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.break-all{word-break:break-all}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-blue-200{--tw-border-opacity:1;border-color:rgb(191 219 254 / var(--tw-border-opacity, 1))}.border-gray-200{--tw-border-opacity:1;border-color:rgb(229 231 235 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-green-200{--tw-border-opacity:1;border-color:rgb(187 247 208 / var(--tw-border-opacity, 1))}.border-red-300{--tw-border-opacity:1;border-color:rgb(252 165 165 / var(--tw-border-opacity, 1))}.border-transparent{border-color:transparent}.border-blue-600{--tw-border-opacity:1;border-color:rgb(37 99 235 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-blue-50{--tw-bg-opacity:1;background-color:rgb(239 246 255 / var(--tw-bg-opacity, 1))}.bg-blue-500{--tw-bg-opacity:1;background-color:rgb(59 130 246 / var(--tw-bg-opacity, 1))}.bg-blue-600{--tw-bg-opacity:1;background-color:rgb(37 99 235 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-green-100{--tw-bg-opacity:1;background-color:rgb(220 252 231 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-green-500{--tw-bg-opacity:1;background-color:rgb(34 197 94 / var(--tw-bg-opacity, 1))}.bg-green-600{--tw-bg-opacity:1;background-color:rgb(22 163 74 / var(--tw-bg-opacity, 1))}.bg-red-100{--tw-bg-opacity:1;background-color:rgb(254 226 226 / var(--tw-bg-opacity, 1))}.bg-red-500{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-gradient-to-br{background-image:linear-gradient(to bottom right, var(--tw-gradient-stops))}.from-blue-50{--tw-gradient-from:#eff6ff var(--tw-gradient-from-position);--tw-gradient-to:rgb(239 246 255 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-gray-50{--tw-gradient-to:#f9fafb var(--tw-gradient-to-position)}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-1{padding-left:0.25rem;padding-right:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-2{padding-bottom:0.5rem}.pl-3{padding-left:0.75rem}.pl-9{padding-left:2.25rem}.pr-3{padding-right:0.75rem}.pr-4{padding-right:1rem}.pt-2{padding-top:0.5rem}.pt-6{padding-top:1.5rem}.text-left{text-align:left}.text-center{text-align:center}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-medium{font-weight:500}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-blue-500{--tw-text-opacity:1;color:rgb(59 130 246 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-700{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-blue-900{--tw-text-opacity:1;color:rgb(30 58 138 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-green-700{--tw-text-opacity:1;color:rgb(21 128 61 / var(--tw-text-opacity, 1))}.text-green-800{--tw-text-opacity:1;color:rgb(22 101 52 / var(--tw-text-opacity, 1))}.text-green-900{--tw-text-opacity:1;color:rgb(20 83 45 / var(--tw-text-opacity, 1))}.text-red-700{--tw-text-opacity:1;color:rgb(185 28 28 / var(--tw-text-opacity, 1))}.text-red-800{--tw-text-opacity:1;color:rgb(153 27 27 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.hover\:bg-blue-700:hover{--tw-bg-opacity:1;background-color:rgb(29 78 216 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-100:hover{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-50:hover{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.hover\:bg-green-700:hover{--tw-bg-opacity:1;background-color:rgb(21 128 61 / var(--tw-bg-opacity, 1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:text-blue-700:hover{--tw-text-opacity:1;color:rgb(29 78 216 / var(--tw-text-opacity, 1))}.hover\:text-gray-600:hover{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-transparent:focus{border-color:transparent}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-blue-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(59 130 246 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:col-span-2{grid-column:span 2 / span 2}.lg\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Tester Controls Panel -->
+  <div id="tester-controls" class="fixed top-4 right-4 bg-white border border-gray-200 rounded-lg shadow-lg p-4 z-50 w-64 hidden">
+    <div class="flex items-center justify-between mb-3">
+      <h3 class="text-sm font-semibold text-gray-900">Tester Controls</h3>
+      <button onclick="document.getElementById(&#39;tester-controls&#39;).classList.add(&#39;hidden&#39;)" class="text-gray-400 hover:text-gray-600">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" class="lucide lucide-x w-4 h-4"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </button>
+    </div>
+    <div class="space-y-3">
+      <div>
+        <label class="block text-xs font-medium text-gray-700 mb-1">Auth State</label>
+        <select id="auth-state" class="w-full text-xs border border-gray-300 rounded px-2 py-1.5 bg-white">
+          <option value="admin">Signed In as Admin</option>
+          <option value="client">Signed In as Client</option>
+          <option value="out">Signed Out</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-xs font-medium text-gray-700 mb-1">KYC Test Mode</label>
+        <select id="kyc-mode" class="w-full text-xs border border-gray-300 rounded px-2 py-1.5 bg-white">
+          <option value="pass">Auto-Pass</option>
+          <option value="fail">Auto-Fail</option>
+        </select>
+      </div>
+      <div class="flex items-center">
+        <input type="checkbox" id="fast-forward" class="w-4 h-4 text-blue-600 border-gray-300 rounded">
+        <label for="fast-forward" class="ml-2 text-xs text-gray-700">Fast-Forward OTP</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="fixed top-4 left-1/2 transform -translate-x-1/2 bg-white border border-gray-200 rounded-lg shadow-lg px-4 py-3 z-50 toast hidden">
+    <div class="flex items-center space-x-3">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-5 h-5 text-green-600"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+      <span id="toast-message" class="text-sm text-gray-900">Order created successfully</span>
+    </div>
+  </div>
+
+  <!-- Main Layout Container -->
+  <div class="flex h-screen overflow-hidden">
+    
+    <!-- Sidebar Navigation -->
+    <aside id="sidebar" class="w-64 bg-white border-r border-gray-200 flex flex-col">
+      <div class="p-6 border-b border-gray-200">
+        <h1 class="text-lg font-semibold tracking-tight text-gray-900">WealthOps</h1>
+      </div>
+      <nav class="flex-1 p-3 space-y-1">
+        <a href="file:///C:/home" onclick="navigateTo(&#39;/dashboard&#39;); return false;" data-route="/dashboard" class="nav-item flex items-center space-x-3 hover:bg-gray-50 transition-colors text-sm font-medium text-gray-700 rounded-md pt-2 pr-3 pb-2 pl-3 active-nav">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="layout-dashboard" class="lucide lucide-layout-dashboard w-5 h-5"><rect width="7" height="9" x="3" y="3" rx="1"></rect><rect width="7" height="5" x="14" y="3" rx="1"></rect><rect width="7" height="9" x="14" y="12" rx="1"></rect><rect width="7" height="5" x="3" y="16" rx="1"></rect></svg>
+          <span>Dashboard</span>
+        </a>
+        <a href="file:///C:/inquiries" onclick="navigateTo(&#39;/inquiries&#39;); return false;" data-route="/inquiries" class="nav-item flex items-center space-x-3 hover:bg-gray-50 transition-colors text-sm font-medium text-gray-700 rounded-md pt-2 pr-3 pb-2 pl-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="inbox" class="lucide lucide-inbox w-5 h-5"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+          <span class="" style="">Inquiries</span>
+        </a>
+        <a href="file:///C:/orders" onclick="navigateTo(&#39;/orders&#39;); return false;" data-route="/orders" class="nav-item flex items-center space-x-3 hover:bg-gray-50 transition-colors text-sm font-medium text-gray-700 rounded-md pt-2 pr-3 pb-2 pl-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shopping-cart" class="lucide lucide-shopping-cart w-5 h-5"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg>
+          <span>Orders</span>
+        </a>
+        <a href="file:///C:/settings" onclick="navigateTo(&#39;/settings&#39;); return false;" data-route="/settings" class="nav-item flex items-center space-x-3 hover:bg-gray-50 transition-colors text-sm font-medium text-gray-700 rounded-md pt-2 pr-3 pb-2 pl-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="settings" class="lucide lucide-settings w-5 h-5"><path d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          <span>Settings</span>
+        </a>
+        <a href="file:///C:/reports" onclick="navigateTo(&#39;/reports&#39;); return false;" data-route="/reports" class="nav-item flex items-center space-x-3 hover:bg-gray-50 transition-colors text-sm font-medium text-gray-700 rounded-md pt-2 pr-3 pb-2 pl-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart-3" class="lucide lucide-bar-chart-3 w-5 h-5"><path d="M3 3v16a2 2 0 0 0 2 2h16"></path><path d="M18 17V9"></path><path d="M13 17V5"></path><path d="M8 17v-3"></path></svg>
+          <span>Reports</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="flex-1 flex flex-col overflow-hidden">
+      
+      <!-- Top Bar -->
+      <header class="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <nav id="breadcrumbs" class="text-sm text-gray-500">Dashboard</nav>
+        </div>
+        <div class="flex items-center space-x-4">
+          <button class="relative p-2 text-gray-400 hover:text-gray-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bell" class="lucide lucide-bell w-5 h-5"><path d="M10.268 21a2 2 0 0 0 3.464 0"></path><path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"></path></svg>
+            <span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+          </button>
+          <div class="flex items-center space-x-3">
+            <img src="./WealthOps_Full_files/photo-1472099645785-5658abf4ff4e" class="w-8 h-8 rounded-full" alt="Profile">
+            <span class="text-sm font-medium text-gray-900">Admin User</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page Content -->
+      <main id="main-content" class="flex-1 overflow-auto bg-gray-50">
+        
+        <!-- Dashboard Page -->
+        <div id="page-dashboard" class="page-content p-6">
+          <h1 class="text-2xl font-semibold tracking-tight text-gray-900 mb-6">Dashboard</h1>
+          
+          <!-- KPI Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div onclick="navigateTo(&#39;/inquiries?status=pending&#39;)" class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow cursor-pointer">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-medium text-gray-600">Pending Inquiries</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="inbox" class="lucide lucide-inbox w-5 h-5 text-amber-500"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>
+              </div>
+              <div class="text-3xl font-semibold text-gray-900">3</div>
+              <p class="text-xs text-gray-500 mt-2">+2 from last week</p>
+            </div>
+            
+            <div onclick="navigateTo(&#39;/orders?status=sent&#39;)" class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow cursor-pointer">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-medium text-gray-600">Offers Sent</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send w-5 h-5 text-blue-500"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+              </div>
+              <div class="text-3xl font-semibold text-gray-900">2</div>
+              <p class="text-xs text-gray-500 mt-2">Awaiting client response</p>
+            </div>
+            
+            <div onclick="navigateTo(&#39;/orders?status=confirmed&#39;)" class="bg-white border border-gray-200 rounded-lg p-5 hover:shadow-md transition-shadow cursor-pointer">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-medium text-gray-600">Confirmed Orders</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-5 h-5 text-green-500"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+              </div>
+              <div class="text-3xl font-semibold text-gray-900">1</div>
+              <p class="text-xs text-gray-500 mt-2">This month</p>
+            </div>
+            
+            <div class="bg-white border border-gray-200 rounded-lg p-5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-sm font-medium text-gray-600">Total Volume</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="dollar-sign" class="lucide lucide-dollar-sign w-5 h-5 text-gray-400"><line x1="12" x2="12" y1="2" y2="22"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <div class="text-3xl font-semibold text-gray-900">$2.4M</div>
+              <p class="text-xs text-gray-500 mt-2">Year to date</p>
+            </div>
+          </div>
+
+          <!-- Charts -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 class="text-sm font-semibold text-gray-900 mb-4">Orders by Product Type</h3>
+              <div class="space-y-3">
+                <div onclick="navigateTo(&#39;/orders?product=Fund&#39;)" class="flex items-center justify-between p-3 hover:bg-gray-50 rounded cursor-pointer">
+                  <span class="text-sm text-gray-700">Funds</span>
+                  <span class="text-sm font-medium text-gray-900">45%</span>
+                </div>
+                <div onclick="navigateTo(&#39;/orders?product=Bond&#39;)" class="flex items-center justify-between p-3 hover:bg-gray-50 rounded cursor-pointer">
+                  <span class="text-sm text-gray-700">Bonds</span>
+                  <span class="text-sm font-medium text-gray-900">30%</span>
+                </div>
+                <div onclick="navigateTo(&#39;/orders?product=DR&#39;)" class="flex items-center justify-between p-3 hover:bg-gray-50 rounded cursor-pointer">
+                  <span class="text-sm text-gray-700">DRs</span>
+                  <span class="text-sm font-medium text-gray-900">15%</span>
+                </div>
+                <div onclick="navigateTo(&#39;/orders?product=Structured&#39;)" class="flex items-center justify-between p-3 hover:bg-gray-50 rounded cursor-pointer">
+                  <span class="text-sm text-gray-700">Structured Products</span>
+                  <span class="text-sm font-medium text-gray-900">10%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-lg p-6">
+              <h3 class="text-sm font-semibold text-gray-900 mb-4">Recent Activity</h3>
+              <div class="space-y-4">
+                <div class="flex items-start space-x-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-4 h-4 text-green-500 mt-0.5"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                  <div>
+                    <p class="text-gray-900">Order ORD-2004 confirmed by Maria L.</p>
+                    <p class="text-gray-500 text-xs mt-1">2 hours ago</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="send" class="lucide lucide-send w-4 h-4 text-blue-500 mt-0.5"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path><path d="m21.854 2.147-10.94 10.939"></path></svg>
+                  <div>
+                    <p class="text-gray-900">Offer sent for ORD-2005 to Nipat S.</p>
+                    <p class="text-gray-500 text-xs mt-1">5 hours ago</p>
+                  </div>
+                </div>
+                <div class="flex items-start space-x-3 text-sm">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text w-4 h-4 text-amber-500 mt-0.5"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                  <div>
+                    <p class="text-gray-900">New inquiry IQ-1005 received from API</p>
+                    <p class="text-gray-500 text-xs mt-1">1 day ago</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Inquiries List Page -->
+        <div id="page-inquiries" class="page-content p-6 hidden">
+          <div class="flex items-center justify-between mb-6">
+            <h1 class="text-2xl font-semibold tracking-tight text-gray-900">Order Inquiries</h1>
+            <div class="flex items-center space-x-3">
+              <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="search" class="lucide lucide-search w-4 h-4 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+                <input type="text" placeholder="Search inquiries..." class="pl-9 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              </div>
+              <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white">
+                <option>All Status</option>
+                <option>Pending</option>
+                <option>Converted</option>
+                <option>Draft</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+            <table class="w-full">
+              <thead class="bg-gray-50 border-b border-gray-200">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Inquiry ID</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Client</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Source</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr onclick="navigateTo(&#39;/inquiries/IQ-1001&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">IQ-1001</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Somchai K.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Global Equity Fund</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">API</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">2025-10-20</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">Pending</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation(); openConvertModal(&#39;IQ-1001&#39;)" class="text-sm text-blue-600 hover:text-blue-700 font-medium">Convert to Order</button>
+                  </td>
+                </tr>
+                <tr onclick="navigateTo(&#39;/inquiries/IQ-1002&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">IQ-1002</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Prapa T.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Corporate Bond 2028</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">UI</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">2025-10-21</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Converted</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation(); navigateTo(&#39;/orders/ORD-2001&#39;)" class="text-sm text-blue-600 hover:text-blue-700 font-medium">View Order</button>
+                  </td>
+                </tr>
+                <tr onclick="navigateTo(&#39;/inquiries/IQ-1003&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">IQ-1003</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Anan W.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">DR - QQQM19</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">API</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">2025-10-22</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">Pending</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation(); openConvertModal(&#39;IQ-1003&#39;)" class="text-sm text-blue-600 hover:text-blue-700 font-medium">Convert to Order</button>
+                  </td>
+                </tr>
+                <tr onclick="navigateTo(&#39;/inquiries/IQ-1004&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">IQ-1004</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Maria L.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Structured Note</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">UI</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">2025-10-23</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">Pending</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation(); openConvertModal(&#39;IQ-1004&#39;)" class="text-sm text-blue-600 hover:text-blue-700 font-medium">Convert to Order</button>
+                  </td>
+                </tr>
+                <tr onclick="navigateTo(&#39;/inquiries/IQ-1005&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">IQ-1005</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Nipat S.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Income Fund</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">API</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">2025-10-24</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-gray-100 text-gray-800 rounded-full">Draft</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation(); openConvertModal(&#39;IQ-1005&#39;)" class="text-sm text-blue-600 hover:text-blue-700 font-medium">Convert to Order</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Inquiry Detail Page -->
+        <div id="page-inquiry-detail" class="page-content hidden p-6">
+          <div class="mb-6">
+            <button onclick="navigateTo(&#39;/inquiries&#39;)" class="text-sm text-gray-600 hover:text-gray-900 flex items-center space-x-1 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-left" class="lucide lucide-arrow-left w-4 h-4"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+              <span>Back to Inquiries</span>
+            </button>
+            <div class="flex items-center justify-between">
+              <h1 class="text-2xl font-semibold tracking-tight text-gray-900">Inquiry <span id="inquiry-detail-id">IQ-1001</span></h1>
+              <button onclick="openConvertModal(document.getElementById(&#39;inquiry-detail-id&#39;).textContent)" class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">Convert to Order Proposal</button>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            <div class="lg:col-span-2 space-y-6">
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-sm font-semibold text-gray-900 mb-4">Inquiry Details</h3>
+                <dl class="grid grid-cols-2 gap-4">
+                  <div>
+                    <dt class="text-xs text-gray-500 mb-1">Client Name</dt>
+                    <dd class="text-sm font-medium text-gray-900" id="inquiry-client">Somchai K.</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 mb-1">Product</dt>
+                    <dd class="text-sm font-medium text-gray-900" id="inquiry-product">Global Equity Fund</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 mb-1">Source</dt>
+                    <dd class="text-sm text-gray-900">API</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 mb-1">Date Received</dt>
+                    <dd class="text-sm text-gray-900">2025-10-20 14:32</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 mb-1">Requested Amount</dt>
+                    <dd class="text-sm text-gray-900">$500,000</dd>
+                  </div>
+                  <div>
+                    <dt class="text-xs text-gray-500 mb-1">Status</dt>
+                    <dd><span class="inline-flex px-2 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">Pending</span></dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-sm font-semibold text-gray-900 mb-4">Activity Timeline</h3>
+                <div class="space-y-4">
+                  <div class="flex items-start space-x-3">
+                    <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                    <div>
+                      <p class="text-sm text-gray-900">Inquiry received via API</p>
+                      <p class="text-xs text-gray-500 mt-1">2025-10-20 14:32</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start space-x-3">
+                    <div class="w-2 h-2 bg-gray-300 rounded-full mt-2"></div>
+                    <div>
+                      <p class="text-sm text-gray-900">Assigned to Admin User</p>
+                      <p class="text-xs text-gray-500 mt-1">2025-10-20 14:35</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-sm font-semibold text-gray-900 mb-4">Client Summary</h3>
+                <div class="flex items-center space-x-3 mb-4">
+                  <img src="./WealthOps_Full_files/photo-1507003211169-0a1dd7228f2d" class="w-12 h-12 rounded-full" alt="Client">
+                  <div>
+                    <p class="text-sm font-medium text-gray-900">Somchai K.</p>
+                    <p class="text-xs text-gray-500">CIF: 10012345</p>
+                  </div>
+                </div>
+                <div class="space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-600">KYC Status</span>
+                    <span class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-600">Risk Profile</span>
+                    <span class="text-xs font-medium text-gray-900">Moderate</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-600">Total AUM</span>
+                    <span class="text-xs font-medium text-gray-900">$1.2M</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="info" class="lucide lucide-info w-4 h-4 text-blue-600 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                  <div>
+                    <p class="text-xs font-medium text-blue-900 mb-1">Backend Annotation</p>
+                    <p class="text-xs text-blue-700">On Convert: Create Order record, link to inquiry_id, initialize status as 'Proposal', copy client and product data.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Orders List Page -->
+        <div id="page-orders" class="page-content p-6 hidden">
+          <div class="flex items-center justify-between mb-6">
+            <h1 class="text-2xl font-semibold tracking-tight text-gray-900">Orders</h1>
+            <div class="flex items-center space-x-3">
+              <div class="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="search" class="lucide lucide-search w-4 h-4 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>
+                <input type="text" placeholder="Search orders..." class="pl-9 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              </div>
+              <select class="border border-gray-300 rounded-lg px-3 py-2 text-sm bg-white">
+                <option>All Status</option>
+                <option>Proposal</option>
+                <option>Sent</option>
+                <option>Confirmed</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+            <table class="w-full">
+              <thead class="bg-gray-50 border-b border-gray-200">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100">
+                    <div class="flex items-center space-x-1">
+                      <span>Order ID</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" class="lucide lucide-chevron-down w-3 h-3"><path d="m6 9 6 6 6-6"></path></svg>
+                    </div>
+                  </th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Client</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Product</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">KYC</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr onclick="navigateTo(&#39;/orders/ORD-2001&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">ORD-2001</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Prapa T.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Corporate Bond 2028</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">Proposal</span></td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation(); openSendOfferModal(&#39;ORD-2001&#39;)" class="text-sm text-blue-600 hover:text-blue-700 font-medium">Send Offer</button>
+                  </td>
+                </tr>
+                <tr onclick="navigateTo(&#39;/orders/ORD-2002&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">ORD-2002</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Somchai K.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Global Equity Fund</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">Sent</span></td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation(); alert(&#39;View offer link: /client/offer/TKN-abc001&#39;)" class="text-sm text-gray-600 hover:text-gray-900 font-medium">View Link</button>
+                  </td>
+                </tr>
+                <tr onclick="navigateTo(&#39;/orders/ORD-2003&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">ORD-2003</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Anan W.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">DR - QQQM19</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-amber-100 text-amber-800 rounded-full">Proposal</span></td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full">Fail</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation()" class="text-sm text-gray-400 cursor-not-allowed" title="KYC must pass before sending offer">Send Offer</button>
+                  </td>
+                </tr>
+                <tr onclick="navigateTo(&#39;/orders/ORD-2004&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">ORD-2004</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Maria L.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Structured Note</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Confirmed</span></td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation(); navigateTo(&#39;/orders/ORD-2004&#39;)" class="text-sm text-blue-600 hover:text-blue-700 font-medium">View Details</button>
+                  </td>
+                </tr>
+                <tr onclick="navigateTo(&#39;/orders/ORD-2005&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">ORD-2005</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Nipat S.</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Income Fund</td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded-full">Sent</span></td>
+                  <td class="px-6 py-4"><span class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span></td>
+                  <td class="px-6 py-4">
+                    <button onclick="event.stopPropagation(); alert(&#39;View offer link: /client/offer/TKN-abc005&#39;)" class="text-sm text-gray-600 hover:text-gray-900 font-medium">View Link</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Order Detail Page -->
+        <div id="page-order-detail" class="page-content p-6 hidden">
+          <div class="mb-6">
+            <button onclick="navigateTo(&#39;/orders&#39;)" class="text-sm text-gray-600 hover:text-gray-900 flex items-center space-x-1 mb-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-left" class="lucide lucide-arrow-left w-4 h-4"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+              <span>Back to Orders</span>
+            </button>
+            <div class="flex items-center justify-between">
+              <div class="flex items-center space-x-3">
+                <h1 class="text-2xl font-semibold tracking-tight text-gray-900">Order <span id="order-detail-id">ORD-2006</span></h1>
+                <span id="order-status-badge" class="inline-flex px-3 py-1 text-sm font-medium rounded-full bg-amber-100 text-amber-800">Proposal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tabs -->
+          <div class="border-b border-gray-200 mb-6">
+            <nav class="flex space-x-8">
+              <a href="file:///C:/Users/Yuant/Downloads/WealthOps%20Reports.html#" onclick="setOrderTab(&#39;summary&#39;); return false;" data-tab="summary" class="order-tab py-3 px-1 text-sm font-medium hover:text-gray-700 border-b-2 tab-active text-blue-600 border-blue-600">Summary</a>
+              <a href="file:///C:/Users/Yuant/Downloads/WealthOps%20Reports.html#" onclick="setOrderTab(&#39;kyc&#39;); return false;" data-tab="kyc" class="order-tab py-3 px-1 text-sm font-medium hover:text-gray-700 border-b-2 text-gray-500 border-transparent">KYC &amp; Suitability</a>
+              <a href="file:///C:/Users/Yuant/Downloads/WealthOps%20Reports.html#" onclick="setOrderTab(&#39;proposal&#39;); return false;" data-tab="proposal" class="order-tab py-3 px-1 text-sm font-medium hover:text-gray-700 border-b-2 text-gray-500 border-transparent">Offer Proposal</a>
+              <a href="file:///C:/Users/Yuant/Downloads/WealthOps%20Reports.html#" onclick="setOrderTab(&#39;acceptance&#39;); return false;" data-tab="acceptance" class="order-tab py-3 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">Client Acceptance</a>
+              <a href="file:///C:/Users/Yuant/Downloads/WealthOps%20Reports.html#" onclick="setOrderTab(&#39;approval&#39;); return false;" data-tab="approval" class="order-tab py-3 px-1 text-sm font-medium text-gray-500 hover:text-gray-700 border-b-2 border-transparent">Approval</a>
+            </nav>
+          </div>
+
+          <!-- Tab Content: Summary -->
+          <div id="order-tab-summary" class="order-tab-content">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              <div class="lg:col-span-2 space-y-6">
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h3 class="text-sm font-semibold text-gray-900 mb-4">Order Details</h3>
+                  <dl class="grid grid-cols-2 gap-4">
+                    <div>
+                      <dt class="text-xs text-gray-500 mb-1">Order ID</dt>
+                      <dd class="text-sm font-medium text-gray-900" id="order-summary-id">ORD-2006</dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs text-gray-500 mb-1">Client Name</dt>
+                      <dd class="text-sm font-medium text-gray-900" id="order-summary-client">Somchai K.</dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs text-gray-500 mb-1">Product</dt>
+                      <dd class="text-sm font-medium text-gray-900" id="order-summary-product">Global Equity Fund</dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs text-gray-500 mb-1">Investment Amount</dt>
+                      <dd class="text-sm text-gray-900">$750,000</dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs text-gray-500 mb-1">Created Date</dt>
+                      <dd class="text-sm text-gray-900">2025-10-21 10:15</dd>
+                    </div>
+                    <div>
+                      <dt class="text-xs text-gray-500 mb-1">Last Updated</dt>
+                      <dd class="text-sm text-gray-900">2025-10-25 16:42</dd>
+                    </div>
+                  </dl>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h3 class="text-sm font-semibold text-gray-900 mb-4">Activity Timeline</h3>
+                  <div class="space-y-4">
+                    <div class="flex items-start space-x-3">
+                      <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                      <div>
+                        <p class="text-sm text-gray-900">Order created from inquiry IQ-1002</p>
+                        <p class="text-xs text-gray-500 mt-1">2025-10-21 10:15</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                      <div>
+                        <p class="text-sm text-gray-900">KYC check passed</p>
+                        <p class="text-xs text-gray-500 mt-1">2025-10-21 10:18</p>
+                      </div>
+                    </div>
+                    <div class="flex items-start space-x-3">
+                      <div class="w-2 h-2 bg-gray-300 rounded-full mt-2"></div>
+                      <div>
+                        <p class="text-sm text-gray-900">Proposal draft saved</p>
+                        <p class="text-xs text-gray-500 mt-1">2025-10-25 16:42</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="bg-white border border-gray-200 rounded-lg p-6">
+                  <h3 class="text-sm font-semibold text-gray-900 mb-4">Client Information</h3>
+                  <div class="flex items-center space-x-3 mb-4">
+                    <img src="./WealthOps_Full_files/photo-1494790108377-be9c29b29330" class="w-12 h-12 rounded-full" alt="Client">
+                    <div>
+                      <p class="text-sm font-medium text-gray-900">Prapa T.</p>
+                      <p class="text-xs text-gray-500">CIF: 10012346</p>
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-gray-600">KYC Status</span>
+                      <span class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-gray-600">Risk Profile</span>
+                      <span class="text-xs font-medium text-gray-900">Conservative</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-gray-600">Total AUM</span>
+                      <span class="text-xs font-medium text-gray-900">$2.5M</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content: KYC -->
+          <div id="order-tab-kyc" class="order-tab-content hidden">
+            <div class="max-w-4xl">
+              <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                <div class="flex items-center justify-between mb-6">
+                  <h3 class="text-sm font-semibold text-gray-900">KYC &amp; Suitability Check</h3>
+                  <button onclick="toggleKYC()" class="px-3 py-1.5 border border-gray-300 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50">Re-run KYC</button>
+                </div>
+
+                <div class="space-y-4">
+                  <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div class="flex items-center space-x-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="user-check" class="lucide lucide-user-check w-5 h-5 text-gray-600"><path d="m16 11 2 2 4-4"></path><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                      <div>
+                        <p class="text-sm font-medium text-gray-900">Identity Verification</p>
+                        <p class="text-xs text-gray-500">National ID verified</p>
+                      </div>
+                    </div>
+                    <span id="kyc-identity" class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span>
+                  </div>
+
+                  <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div class="flex items-center space-x-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield-check" class="lucide lucide-shield-check w-5 h-5 text-gray-600"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                      <div>
+                        <p class="text-sm font-medium text-gray-900">AML Screening</p>
+                        <p class="text-xs text-gray-500">No matches found</p>
+                      </div>
+                    </div>
+                    <span id="kyc-aml" class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span>
+                  </div>
+
+                  <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div class="flex items-center space-x-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text w-5 h-5 text-gray-600"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                      <div>
+                        <p class="text-sm font-medium text-gray-900">Wealth Declaration</p>
+                        <p class="text-xs text-gray-500">Source of funds verified</p>
+                      </div>
+                    </div>
+                    <span id="kyc-wealth" class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span>
+                  </div>
+
+                  <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                    <div class="flex items-center space-x-3">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bar-chart" class="lucide lucide-bar-chart w-5 h-5 text-gray-600"><path d="M5 21v-6"></path><path d="M12 21V9"></path><path d="M19 21V3"></path></svg>
+                      <div>
+                        <p class="text-sm font-medium text-gray-900">Suitability Assessment</p>
+                        <p class="text-xs text-gray-500">Product matches risk profile</p>
+                      </div>
+                    </div>
+                    <span id="kyc-suitability" class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Pass</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="info" class="lucide lucide-info w-4 h-4 text-blue-600 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                  <div>
+                    <p class="text-xs font-medium text-blue-900 mb-1">Backend Annotation</p>
+                    <p class="text-xs text-blue-700">Re-run KYC button calls kycService.recheck(orderId). Toggle demo simulates Pass/Fail states. If any check fails, block Send to Client action on Proposal tab with tooltip.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content: Proposal -->
+          <div id="order-tab-proposal" class="order-tab-content hidden">
+            <div class="max-w-4xl">
+              <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+                <div class="flex items-center justify-between mb-6">
+                  <h3 class="text-sm font-semibold text-gray-900">Offer Proposal</h3>
+                  <button onclick="toggleProposalEdit()" class="px-3 py-1.5 border border-gray-300 text-sm font-medium text-gray-700 rounded-lg hover:bg-gray-50">
+                    <span id="proposal-edit-btn-text">Edit</span>
+                  </button>
+                </div>
+
+                <div class="space-y-4">
+                  <div>
+                    <label class="block text-xs font-medium text-gray-700 mb-2">Product Name</label>
+                    <input type="text" id="proposal-product" value="Corporate Bond 2028" disabled="" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm bg-gray-50">
+                  </div>
+                  <div class="grid grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-xs font-medium text-gray-700 mb-2">Investment Amount</label>
+                      <input type="text" id="proposal-amount" value="$750,000" disabled="" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm bg-gray-50">
+                    </div>
+                    <div>
+                      <label class="block text-xs font-medium text-gray-700 mb-2">Expected Return</label>
+                      <input type="text" value="4.5% p.a." disabled="" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm bg-gray-50">
+                    </div>
+                  </div>
+                  <div>
+                    <label class="block text-xs font-medium text-gray-700 mb-2">Maturity Date</label>
+                    <input type="text" value="December 31, 2028" disabled="" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm bg-gray-50">
+                  </div>
+                  <div>
+                    <label class="block text-xs font-medium text-gray-700 mb-2">Additional Remarks</label>
+                    <textarea id="proposal-remarks" disabled="" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm bg-gray-50 h-24">Preferred client rate applied. Early redemption available with 30-day notice.</textarea>
+                  </div>
+                </div>
+
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                  <button id="send-to-client-btn" onclick="openEmailModal()" class="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">Send to Client</button>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div class="flex items-start space-x-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="info" class="lucide lucide-info w-4 h-4 text-blue-600 mt-0.5"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                  <div>
+                    <p class="text-xs font-medium text-blue-900 mb-1">Backend Annotation</p>
+                    <p class="text-xs text-blue-700">Send to Client generates unique token (UUID), calls emailService.sendOffer(orderId, token), logs audit event, updates order.status to 'Sent', and creates deep link /client/offer/{token}.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content: Client Acceptance -->
+          <div id="order-tab-acceptance" class="order-tab-content hidden">
+            <div class="max-w-4xl">
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-sm font-semibold text-gray-900 mb-4">Client Acceptance Status</h3>
+                <div id="acceptance-pending" class="text-center py-8">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" class="lucide lucide-clock w-12 h-12 text-gray-400 mx-auto mb-3"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+                  <p class="text-sm text-gray-600">Waiting for client to accept offer</p>
+                  <p class="text-xs text-gray-500 mt-2">Offer sent: 2025-10-25 17:30</p>
+                </div>
+                <div id="acceptance-confirmed" class="hidden">
+                  <div class="flex items-center space-x-3 p-4 bg-green-50 rounded-lg mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-6 h-6 text-green-600"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    <div>
+                      <p class="text-sm font-medium text-green-900">Offer Accepted</p>
+                      <p class="text-xs text-green-700">Client confirmed on 2025-10-26 09:15</p>
+                    </div>
+                  </div>
+                  <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-gray-600">Payment Method</span>
+                      <span class="text-xs font-medium text-gray-900" id="acceptance-payment">Bank Transfer</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                      <span class="text-xs text-gray-600">OTP Verified</span>
+                      <span class="inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full">Yes</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab Content: Approval -->
+          <div id="order-tab-approval" class="order-tab-content hidden">
+            <div class="max-w-4xl">
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <h3 class="text-sm font-semibold text-gray-900 mb-4">Final Approval</h3>
+                <p class="text-sm text-gray-600 mb-6">Review all order details before final confirmation.</p>
+                
+                <div class="space-y-4 mb-6">
+                  <div class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-5 h-5 text-green-600"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    <span class="text-sm text-gray-900">KYC verification completed</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-5 h-5 text-green-600"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    <span class="text-sm text-gray-900">Client accepted offer</span>
+                  </div>
+                  <div class="flex items-center space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-5 h-5 text-green-600"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+                    <span class="text-sm text-gray-900">Payment method confirmed</span>
+                  </div>
+                </div>
+
+                <button onclick="confirmOrder()" class="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700">Confirm Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Settings Page -->
+        <div id="page-settings" class="page-content p-6 hidden">
+          <h1 class="text-2xl font-semibold tracking-tight text-gray-900 mb-6">Settings</h1>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div onclick="navigateTo(&#39;/settings/users&#39;)" class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" class="lucide lucide-users w-8 h-8 text-gray-600 mb-3"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><path d="M16 3.128a4 4 0 0 1 0 7.744"></path><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><circle cx="9" cy="7" r="4"></circle></svg>
+              <h3 class="text-sm font-semibold text-gray-900 mb-2">User Management</h3>
+              <p class="text-xs text-gray-600">Manage team members and roles</p>
+            </div>
+            
+            <div onclick="navigateTo(&#39;/settings/products&#39;)" class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="package" class="lucide lucide-package w-8 h-8 text-gray-600 mb-3"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><polyline points="3.29 7 12 12 20.71 7"></polyline><path d="m7.5 4.27 9 5.15"></path></svg>
+              <h3 class="text-sm font-semibold text-gray-900 mb-2">Product Catalog</h3>
+              <p class="text-xs text-gray-600">Configure available products</p>
+            </div>
+            
+            <div onclick="navigateTo(&#39;/settings/email-templates&#39;)" class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow cursor-pointer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" class="lucide lucide-mail w-8 h-8 text-gray-600 mb-3"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+              <h3 class="text-sm font-semibold text-gray-900 mb-2">Email Templates</h3>
+              <p class="text-xs text-gray-600">Customize email notifications</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reports Page -->
+        <div id="page-reports" class="page-content p-6 hidden">
+          <h1 class="text-2xl font-semibold tracking-tight text-gray-900 mb-6">Reports &amp; Audit Log</h1>
+          
+          <div class="bg-white border border-gray-200 rounded-lg overflow-hidden">
+            <table class="w-full">
+              <thead class="bg-gray-50 border-b border-gray-200">
+                <tr>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Timestamp</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Event</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                  <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Details</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-200">
+                <tr onclick="openAuditDetail(&#39;Order ORD-2004 confirmed by client Maria L.&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm text-gray-600">2025-10-26 09:15</td>
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">Order Confirmed</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Maria L. (Client)</td>
+                  <td class="px-6 py-4 text-sm text-blue-600 hover:text-blue-700 cursor-pointer">View Details</td>
+                </tr>
+                <tr onclick="openAuditDetail(&#39;Offer email sent for ORD-2005 with token TKN-abc005&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm text-gray-600">2025-10-25 17:30</td>
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">Offer Sent</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Admin User</td>
+                  <td class="px-6 py-4 text-sm text-blue-600 hover:text-blue-700 cursor-pointer">View Details</td>
+                </tr>
+                <tr onclick="openAuditDetail(&#39;Order ORD-2003 created from inquiry IQ-1003&#39;)" class="table-row">
+                  <td class="px-6 py-4 text-sm text-gray-600">2025-10-22 11:20</td>
+                  <td class="px-6 py-4 text-sm font-medium text-gray-900">Order Created</td>
+                  <td class="px-6 py-4 text-sm text-gray-700">Admin User</td>
+                  <td class="px-6 py-4 text-sm text-blue-600 hover:text-blue-700 cursor-pointer">View Details</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Client Offer Portal Page -->
+        <div id="page-client-offer" class="page-content hidden">
+          <div class="min-h-screen bg-gradient-to-br from-blue-50 to-gray-50 flex items-center justify-center p-6">
+            <div class="max-w-2xl w-full">
+              <!-- Signed Out View -->
+              <div id="client-offer-signedout" class="bg-white rounded-lg shadow-lg p-8">
+                <div class="text-center mb-8">
+                  <h1 class="text-2xl font-semibold tracking-tight text-gray-900 mb-2">Investment Offer</h1>
+                  <p class="text-sm text-gray-600">You have received an exclusive investment opportunity</p>
+                </div>
+
+                <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-6">
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs text-gray-500">Product</span>
+                    <span class="text-sm font-medium text-gray-900" id="client-offer-product">Global Equity Fund</span>
+                  </div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs text-gray-500">Investment Amount</span>
+                    <span class="text-sm font-medium text-gray-900">$500,000</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-xs text-gray-500">Expected Return</span>
+                    <span class="text-sm font-medium text-gray-900">8-12% p.a.</span>
+                  </div>
+                </div>
+
+                <p class="text-sm text-gray-600 mb-6">To view full details and accept this offer, please sign in to your YSInvest account.</p>
+
+                <div class="space-y-3">
+                  <button onclick="navigateTo(&#39;/client/login&#39;)" class="w-full px-4 py-3 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">Sign In to YSInvest</button>
+                  <button onclick="navigateTo(&#39;/client/signup&#39;)" class="w-full px-4 py-3 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50">Create New Account</button>
+                </div>
+              </div>
+
+              <!-- Signed In View -->
+              <div id="client-offer-signedin" class="bg-white rounded-lg shadow-lg p-8 hidden">
+                <div class="text-center mb-8">
+                  <h1 class="text-2xl font-semibold tracking-tight text-gray-900 mb-2">Investment Offer Details</h1>
+                  <p class="text-sm text-gray-600">Review and accept your personalized offer</p>
+                </div>
+
+                <div class="space-y-6 mb-8">
+                  <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-sm font-semibold text-gray-900 mb-4">Product Information</h3>
+                    <dl class="space-y-3">
+                      <div class="flex items-center justify-between">
+                        <dt class="text-xs text-gray-500">Product Name</dt>
+                        <dd class="text-sm font-medium text-gray-900" id="client-offer-product-detail">Global Equity Fund</dd>
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <dt class="text-xs text-gray-500">Investment Amount</dt>
+                        <dd class="text-sm font-medium text-gray-900">$500,000</dd>
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <dt class="text-xs text-gray-500">Expected Return</dt>
+                        <dd class="text-sm font-medium text-gray-900">8-12% p.a.</dd>
+                      </div>
+                      <div class="flex items-center justify-between">
+                        <dt class="text-xs text-gray-500">Investment Period</dt>
+                        <dd class="text-sm font-medium text-gray-900">36 months</dd>
+                      </div>
+                    </dl>
+                  </div>
+
+                  <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                    <h3 class="text-sm font-semibold text-gray-900 mb-3">Documents</h3>
+                    <div class="space-y-2">
+                      <a href="file:///C:/Users/Yuant/Downloads/WealthOps%20Reports.html#" class="flex items-center justify-between p-2 hover:bg-white rounded">
+                        <div class="flex items-center space-x-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text w-4 h-4 text-gray-600"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                          <span class="text-sm text-gray-900">Fund Prospectus.pdf</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" class="lucide lucide-download w-4 h-4 text-gray-400"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+                      </a>
+                      <a href="file:///C:/Users/Yuant/Downloads/WealthOps%20Reports.html#" class="flex items-center justify-between p-2 hover:bg-white rounded">
+                        <div class="flex items-center space-x-2">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="file-text" class="lucide lucide-file-text w-4 h-4 text-gray-600"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+                          <span class="text-sm text-gray-900">Terms &amp; Conditions.pdf</span>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="download" class="lucide lucide-download w-4 h-4 text-gray-400"><path d="M12 15V3"></path><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><path d="m7 10 5 5 5-5"></path></svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex space-x-3">
+                  <button onclick="startAcceptanceFlow()" class="flex-1 px-4 py-3 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700">Accept Offer</button>
+                  <button class="flex-1 px-4 py-3 border border-red-300 text-red-700 text-sm font-medium rounded-lg hover:bg-red-50">Decline</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Client Login Page -->
+        <div id="page-client-login" class="page-content hidden">
+          <div class="min-h-screen bg-gradient-to-br from-blue-50 to-gray-50 flex items-center justify-center p-6">
+            <div class="max-w-md w-full bg-white rounded-lg shadow-lg p-8">
+              <div class="text-center mb-8">
+                <h1 class="text-2xl font-semibold tracking-tight text-gray-900 mb-2">Sign In</h1>
+                <p class="text-sm text-gray-600">Access your YSInvest account</p>
+              </div>
+
+              <form onsubmit="handleClientLogin(event)" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-2">Email or CIF</label>
+                  <input type="text" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your email or CIF">
+                </div>
+                <div>
+                  <label class="block text-xs font-medium text-gray-700 mb-2">Password</label>
+                  <input type="password" class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your password">
+                </div>
+                <button type="submit" class="w-full px-4 py-3 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">Sign In</button>
+              </form>
+
+              <p class="text-xs text-gray-500 text-center mt-6">Don't have an account? <a href="file:///C:/Users/Yuant/Downloads/WealthOps%20Reports.html#" onclick="navigateTo(&#39;/client/signup&#39;); return false;" class="text-blue-600 hover:text-blue-700">Sign up</a></p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal: Convert Inquiry to Order -->
+  <div id="modal-convert" class="fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-6 hidden">
+    <div class="bg-white rounded-lg shadow-xl max-w-md w-full">
+      <div class="p-6 border-b border-gray-200">
+        <h3 class="text-lg font-semibold text-gray-900">Convert to Order</h3>
+      </div>
+      <div class="p-6">
+        <p class="text-sm text-gray-600 mb-6">Create an order proposal from inquiry <span id="convert-inquiry-id" class="font-medium text-gray-900">IQ-1001</span>?</p>
+        <div class="flex space-x-3">
+          <button onclick="convertToProposal()" class="flex-1 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">Create Proposal</button>
+          <button onclick="closeModal(&#39;modal-convert&#39;)" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Send Offer Email -->
+  <div id="modal-email" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-6">
+    <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div class="p-6 border-b border-gray-200">
+        <h3 class="text-lg font-semibold text-gray-900">Send Offer to Client</h3>
+      </div>
+      <div class="p-6">
+        <div class="space-y-4 mb-6">
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-2">Email Template</label>
+            <select class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm bg-white">
+              <option>Standard Offer Email</option>
+              <option>Premium Client Offer</option>
+              <option>Custom Template</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-medium text-gray-700 mb-2">Preview</label>
+            <div class="border border-gray-200 rounded-lg p-4 bg-gray-50 text-sm text-gray-700">
+              <p class="mb-2">Dear <span id="email-client-name">Client</span>,</p>
+              <p class="mb-2">We are pleased to present you with an exclusive investment opportunity in <span id="email-product-name">Product</span>.</p>
+              <p class="mb-2">Please review the attached documents and accept the offer through your secure portal.</p>
+              <p>Best regards,Wealth Management Team</p>
+            </div>
+          </div>
+        </div>
+        <div id="email-sent-success" class="hidden mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+          <div class="flex items-start space-x-2 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" class="lucide lucide-check-circle w-5 h-5 text-green-600 mt-0.5"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>
+            <div>
+              <p class="text-sm font-medium text-green-900">Email Sent Successfully</p>
+              <p class="text-xs text-green-700 mt-1">Deep link generated for client access</p>
+            </div>
+          </div>
+          <div class="bg-white border border-green-200 rounded p-3">
+            <p class="text-xs text-gray-500 mb-1">Client Access Link:</p>
+            <p class="text-xs font-mono text-gray-900 break-all" id="generated-link"></p>
+          </div>
+          <button onclick="openClientOfferAsTest()" class="mt-3 px-3 py-1.5 bg-blue-600 text-white text-xs font-medium rounded hover:bg-blue-700">Open Link as Client (Test)</button>
+        </div>
+        <div id="email-send-actions" class="flex space-x-3">
+          <button onclick="sendOfferEmail()" class="flex-1 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">Send Email</button>
+          <button onclick="closeModal(&#39;modal-email&#39;)" class="flex-1 px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Payment Method Selection -->
+  <div id="modal-payment" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-6">
+    <div class="bg-white rounded-lg shadow-xl max-w-md w-full">
+      <div class="p-6 border-b border-gray-200">
+        <div class="flex items-center space-x-3 mb-2">
+          <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+            <span class="text-sm font-semibold text-blue-600">1</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900">Select Payment Method</h3>
+        </div>
+        <div class="flex items-center space-x-2 text-xs text-gray-500 ml-11">
+          <span class="font-medium text-blue-600">Payment</span>
+          <span>→</span>
+          <span>OTP</span>
+          <span>→</span>
+          <span>Confirmation</span>
+        </div>
+      </div>
+      <div class="p-6">
+        <div class="space-y-3 mb-6">
+          <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+            <input type="radio" name="payment" value="bank" checked="" class="w-4 h-4 text-blue-600">
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">Bank Transfer</p>
+              <p class="text-xs text-gray-500">Direct transfer from your account</p>
+            </div>
+          </label>
+          <label class="flex items-center p-4 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+            <input type="radio" name="payment" value="cash" class="w-4 h-4 text-blue-600">
+            <div class="ml-3">
+              <p class="text-sm font-medium text-gray-900">Cash/Cheque</p>
+              <p class="text-xs text-gray-500">Payment at branch</p>
+            </div>
+          </label>
+        </div>
+        <button onclick="proceedToOTP()" class="w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">Continue</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: OTP Verification -->
+  <div id="modal-otp" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-6">
+    <div class="bg-white rounded-lg shadow-xl max-w-md w-full">
+      <div class="p-6 border-b border-gray-200">
+        <div class="flex items-center space-x-3 mb-2">
+          <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+            <span class="text-sm font-semibold text-blue-600">2</span>
+          </div>
+          <h3 class="text-lg font-semibold text-gray-900">Enter OTP</h3>
+        </div>
+        <div class="flex items-center space-x-2 text-xs text-gray-500 ml-11">
+          <span class="text-green-600">✓ Payment</span>
+          <span>→</span>
+          <span class="font-medium text-blue-600">OTP</span>
+          <span>→</span>
+          <span>Confirmation</span>
+        </div>
+      </div>
+      <div class="p-6">
+        <p class="text-sm text-gray-600 mb-4">Enter the 6-digit code sent to your registered mobile</p>
+        <input type="text" id="otp-input" maxlength="6" placeholder="000000" class="w-full px-4 py-3 border border-gray-300 rounded-lg text-center text-lg font-mono tracking-widest mb-6 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <button onclick="verifyOTP()" class="w-full px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700">Verify &amp; Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Audit Detail -->
+  <div id="modal-audit" class="hidden fixed inset-0 z-50 modal-backdrop flex items-center justify-center p-6">
+    <div class="bg-white rounded-lg shadow-xl max-w-lg w-full">
+      <div class="p-6 border-b border-gray-200 flex items-center justify-between">
+        <h3 class="text-lg font-semibold text-gray-900">Audit Event Details</h3>
+        <button onclick="closeModal(&#39;modal-audit&#39;)" class="text-gray-400 hover:text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" class="lucide lucide-x w-5 h-5"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        </button>
+      </div>
+      <div class="p-6">
+        <p id="audit-detail-content" class="text-sm text-gray-700"></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Route data mapping
+    const routeData = {
+      '/inquiries/IQ-1001': { id: 'IQ-1001', client: 'Somchai K.', product: 'Global Equity Fund' },
+      '/inquiries/IQ-1002': { id: 'IQ-1002', client: 'Prapa T.', product: 'Corporate Bond 2028' },
+      '/inquiries/IQ-1003': { id: 'IQ-1003', client: 'Anan W.', product: 'DR - QQQM19' },
+      '/inquiries/IQ-1004': { id: 'IQ-1004', client: 'Maria L.', product: 'Structured Note' },
+      '/inquiries/IQ-1005': { id: 'IQ-1005', client: 'Nipat S.', product: 'Income Fund' },
+      '/orders/ORD-2001': { id: 'ORD-2001', client: 'Prapa T.', product: 'Corporate Bond 2028', status: 'Proposal', kyc: 'Pass' },
+      '/orders/ORD-2002': { id: 'ORD-2002', client: 'Somchai K.', product: 'Global Equity Fund', status: 'Sent', kyc: 'Pass', token: 'TKN-abc001' },
+      '/orders/ORD-2003': { id: 'ORD-2003', client: 'Anan W.', product: 'DR - QQQM19', status: 'Proposal', kyc: 'Fail' },
+      '/orders/ORD-2004': { id: 'ORD-2004', client: 'Maria L.', product: 'Structured Note', status: 'Confirmed', kyc: 'Pass' },
+      '/orders/ORD-2005': { id: 'ORD-2005', client: 'Nipat S.', product: 'Income Fund', status: 'Sent', kyc: 'Pass', token: 'TKN-abc005' },
+    };
+
+    let currentRoute = '/dashboard';
+    let currentOrderId = null;
+    let currentOrderTab = 'summary';
+    let currentOfferToken = null;
+
+    // Navigation function
+    function navigateTo(route) {
+      currentRoute = route;
+      
+      // Hide all pages
+      document.querySelectorAll('.page-content').forEach(p => p.classList.add('hidden'));
+      
+      // Remove active state from all nav items
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active-nav'));
+      
+      // Update breadcrumbs
+      updateBreadcrumbs(route);
+      
+      // Show appropriate page and set active nav
+      if (route === '/dashboard') {
+        document.getElementById('page-dashboard').classList.remove('hidden');
+        document.querySelector('[data-route="/dashboard"]').classList.add('active-nav');
+      } else if (route.startsWith('/inquiries/')) {
+        const inquiryId = route.split('/')[2];
+        showInquiryDetail(inquiryId);
+      } else if (route === '/inquiries') {
+        document.getElementById('page-inquiries').classList.remove('hidden');
+        document.querySelector('[data-route="/inquiries"]').classList.add('active-nav');
+      } else if (route.startsWith('/orders/')) {
+        const parts = route.split('/');
+        const orderId = parts[2];
+        let tab = 'summary';
+        if (parts[3] === 'kyc') tab = 'kyc';
+        else if (parts[3] === 'proposal') tab = 'proposal';
+        else if (parts[3] === 'client-acceptance') tab = 'acceptance';
+        showOrderDetail(orderId, tab);
+      } else if (route === '/orders') {
+        document.getElementById('page-orders').classList.remove('hidden');
+        document.querySelector('[data-route="/orders"]').classList.add('active-nav');
+      } else if (route === '/settings') {
+        document.getElementById('page-settings').classList.remove('hidden');
+        document.querySelector('[data-route="/settings"]').classList.add('active-nav');
+      } else if (route === '/reports') {
+        document.getElementById('page-reports').classList.remove('hidden');
+        document.querySelector('[data-route="/reports"]').classList.add('active-nav');
+      } else if (route.startsWith('/client/offer/')) {
+        const token = route.split('/')[3];
+        showClientOffer(token);
+      } else if (route === '/client/login') {
+        document.getElementById('page-client-login').classList.remove('hidden');
+      }
+      
+      // Reinitialize icons after DOM changes
+      setTimeout(() => lucide.createIcons(), 50);
+    }
+
+    function updateBreadcrumbs(route) {
+      const breadcrumbsEl = document.getElementById('breadcrumbs');
+      let crumbs = [];
+      
+      if (route === '/dashboard') {
+        crumbs = ['Dashboard'];
+      } else if (route.startsWith('/inquiries/')) {
+        const id = route.split('/')[2];
+        crumbs = ['Order Inquiries', id];
+      } else if (route === '/inquiries') {
+        crumbs = ['Order Inquiries'];
+      } else if (route.startsWith('/orders/')) {
+        const parts = route.split('/');
+        const id = parts[2];
+        crumbs = ['Orders', id];
+        if (parts[3]) crumbs.push(parts[3].replace('-', ' '));
+      } else if (route === '/orders') {
+        crumbs = ['Orders'];
+      } else if (route === '/settings') {
+        crumbs = ['Settings'];
+      } else if (route === '/reports') {
+        crumbs = ['Reports'];
+      } else if (route.startsWith('/client/')) {
+        crumbs = ['Client Portal'];
+      }
+      
+      breadcrumbsEl.innerHTML = crumbs.join(' / ');
+    }
+
+    function showInquiryDetail(inquiryId) {
+      const data = routeData[`/inquiries/${inquiryId}`];
+      if (data) {
+        document.getElementById('inquiry-detail-id').textContent = data.id;
+        document.getElementById('inquiry-client').textContent = data.client;
+        document.getElementById('inquiry-product').textContent = data.product;
+      }
+      document.getElementById('page-inquiry-detail').classList.remove('hidden');
+      document.querySelector('[data-route="/inquiries"]').classList.add('active-nav');
+    }
+
+    function showOrderDetail(orderId, tab = 'summary') {
+      currentOrderId = orderId;
+      const data = routeData[`/orders/${orderId}`];
+      if (data) {
+        document.getElementById('order-detail-id').textContent = data.id;
+        document.getElementById('order-summary-id').textContent = data.id;
+        document.getElementById('order-summary-client').textContent = data.client;
+        document.getElementById('order-summary-product').textContent = data.product;
+        
+        // Update status badge
+        const badge = document.getElementById('order-status-badge');
+        badge.textContent = data.status;
+        badge.className = 'inline-flex px-3 py-1 text-sm font-medium rounded-full';
+        if (data.status === 'Proposal') badge.classList.add('bg-amber-100', 'text-amber-800');
+        else if (data.status === 'Sent') badge.classList.add('bg-blue-100', 'text-blue-800');
+        else if (data.status === 'Confirmed') badge.classList.add('bg-green-100', 'text-green-800');
+      }
+      
+      document.getElementById('page-order-detail').classList.remove('hidden');
+      document.querySelector('[data-route="/orders"]').classList.add('active-nav');
+      setOrderTab(tab);
+    }
+
+    function setOrderTab(tab) {
+      currentOrderTab = tab;
+      
+      // Hide all tab contents
+      document.querySelectorAll('.order-tab-content').forEach(t => t.classList.add('hidden'));
+      
+      // Remove active state from all tabs
+      document.querySelectorAll('.order-tab').forEach(t => {
+        t.classList.remove('tab-active', 'text-blue-600', 'border-blue-600');
+        t.classList.add('text-gray-500', 'border-transparent');
+      });
+      
+      // Show selected tab
+      document.getElementById(`order-tab-${tab}`).classList.remove('hidden');
+      
+      // Set active tab
+      const activeTab = document.querySelector(`[data-tab="${tab}"]`);
+      if (activeTab) {
+        activeTab.classList.add('tab-active', 'text-blue-600', 'border-blue-600');
+        activeTab.classList.remove('text-gray-500', 'border-transparent');
+      }
+      
+      // Update route
+      if (currentOrderId) {
+        if (tab === 'kyc') currentRoute = `/orders/${currentOrderId}/kyc`;
+        else if (tab === 'proposal') currentRoute = `/orders/${currentOrderId}/proposal`;
+        else if (tab === 'acceptance') currentRoute = `/orders/${currentOrderId}/client-acceptance`;
+        else currentRoute = `/orders/${currentOrderId}`;
+        updateBreadcrumbs(currentRoute);
+      }
+    }
+
+    function showClientOffer(token) {
+      currentOfferToken = token;
+      const authState = document.getElementById('auth-state').value;
+      
+      document.getElementById('page-client-offer').classList.remove('hidden');
+      
+      if (authState === 'client') {
+        document.getElementById('client-offer-signedout').classList.add('hidden');
+        document.getElementById('client-offer-signedin').classList.remove('hidden');
+        
+        // Populate product data based on token
+        if (token === 'TKN-abc001') {
+          document.getElementById('client-offer-product-detail').textContent = 'Global Equity Fund';
+        } else if (token === 'TKN-abc005') {
+          document.getElementById('client-offer-product-detail').textContent = 'Income Fund';
+        }
+      } else {
+        document.getElementById('client-offer-signedout').classList.remove('hidden');
+        document.getElementById('client-offer-signedin').classList.add('hidden');
+        
+        if (token === 'TKN-abc001') {
+          document.getElementById('client-offer-product').textContent = 'Global Equity Fund';
+        } else if (token === 'TKN-abc005') {
+          document.getElementById('client-offer-product').textContent = 'Income Fund';
+        }
+      }
+    }
+
+    // Modal functions
+    function openConvertModal(inquiryId) {
+      document.getElementById('convert-inquiry-id').textContent = inquiryId;
+      document.getElementById('modal-convert').classList.remove('hidden');
+    }
+
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add('hidden');
+    }
+
+    function convertToProposal() {
+      const inquiryId = document.getElementById('convert-inquiry-id').textContent;
+      
+      // Create new order ID
+      const newOrderId = 'ORD-200' + (Object.keys(routeData).filter(k => k.startsWith('/orders/')).length + 1);
+      
+      // Get inquiry data
+      const inquiryData = routeData[`/inquiries/${inquiryId}`];
+      
+      // Create order data
+      routeData[`/orders/${newOrderId}`] = {
+        id: newOrderId,
+        client: inquiryData.client,
+        product: inquiryData.product,
+        status: 'Proposal',
+        kyc: 'Pass'
+      };
+      
+      closeModal('modal-convert');
+      showToast('Order created successfully');
+      navigateTo(`/orders/${newOrderId}/proposal`);
+    }
+
+    function openSendOfferModal(orderId) {
+      currentOrderId = orderId;
+      const data = routeData[`/orders/${orderId}`];
+      if (data) {
+        document.getElementById('email-client-name').textContent = data.client;
+        document.getElementById('email-product-name').textContent = data.product;
+      }
+      
+      // Reset modal state
+      document.getElementById('email-sent-success').classList.add('hidden');
+      document.getElementById('email-send-actions').classList.remove('hidden');
+      
+      document.getElementById('modal-email').classList.remove('hidden');
+    }
+
+    function openEmailModal() {
+      openSendOfferModal(currentOrderId);
+    }
+
+    function sendOfferEmail() {
+      // Generate token
+      const token = 'TKN-' + Math.random().toString(36).substr(2, 6);
+      const link = window.location.origin + `/client/offer/${token}`;
+      
+      // Update order data
+      if (currentOrderId) {
+        routeData[`/orders/${currentOrderId}`].status = 'Sent';
+        routeData[`/orders/${currentOrderId}`].token = token;
+      }
+      
+      // Show success
+      document.getElementById('generated-link').textContent = link;
+      document.getElementById('email-sent-success').classList.remove('hidden');
+      document.getElementById('email-send-actions').classList.add('hidden');
+      
+      showToast('Offer email sent successfully');
+    }
+
+    function openClientOfferAsTest() {
+      // Temporarily set auth state to client
+      document.getElementById('auth-state').value = 'client';
+      
+      // Get token from generated link
+      const link = document.getElementById('generated-link').textContent;
+      const token = link.split('/').pop();
+      
+      closeModal('modal-email');
+      navigateTo(`/client/offer/${token}`);
+    }
+
+    function startAcceptanceFlow() {
+      const fastForward = document.getElementById('fast-forward').checked;
+      
+      if (fastForward) {
+        // Fast forward: skip to confirmation
+        completeAcceptance('Bank Transfer');
+      } else {
+        // Normal flow: show payment modal
+        document.getElementById('modal-payment').classList.remove('hidden');
+      }
+    }
+
+    function proceedToOTP() {
+      closeModal('modal-payment');
+      document.getElementById('modal-otp').classList.remove('hidden');
+    }
+
+    function verifyOTP() {
+      const otp = document.getElementById('otp-input').value;
+      if (otp.length === 6) {
+        const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+        closeModal('modal-otp');
+        completeAcceptance(paymentMethod === 'bank' ? 'Bank Transfer' : 'Cash/Cheque');
+      } else {
+        alert('Please enter a valid 6-digit OTP');
+      }
+    }
+
+    function completeAcceptance(paymentMethod) {
+      // Update order status
+      if (currentOfferToken === 'TKN-abc001') {
+        routeData['/orders/ORD-2002'].status = 'Confirmed';
+      } else if (currentOfferToken === 'TKN-abc005') {
+        routeData['/orders/ORD-2005'].status = 'Confirmed';
+      }
+      
+      showToast('Offer accepted successfully! Redirecting...');
+      
+      setTimeout(() => {
+        // Navigate to order detail and show acceptance confirmation
+        const orderId = currentOfferToken === 'TKN-abc001' ? 'ORD-2002' : 'ORD-2005';
+        navigateTo(`/orders/${orderId}/client-acceptance`);
+        
+        // Show confirmed state
+        document.getElementById('acceptance-pending').classList.add('hidden');
+        document.getElementById('acceptance-confirmed').classList.remove('hidden');
+        document.getElementById('acceptance-payment').textContent = paymentMethod;
+      }, 1500);
+    }
+
+    function confirmOrder() {
+      if (currentOrderId) {
+        routeData[`/orders/${currentOrderId}`].status = 'Confirmed';
+        
+        // Update status badge
+        const badge = document.getElementById('order-status-badge');
+        badge.textContent = 'Confirmed';
+        badge.className = 'inline-flex px-3 py-1 text-sm font-medium bg-green-100 text-green-800 rounded-full';
+      }
+      
+      showToast('Order confirmed successfully');
+    }
+
+    function handleClientLogin(e) {
+      e.preventDefault();
+      document.getElementById('auth-state').value = 'client';
+      showToast('Signed in successfully');
+      
+      // Redirect to offer if there's a pending token
+      if (currentOfferToken) {
+        navigateTo(`/client/offer/${currentOfferToken}`);
+      } else {
+        navigateTo('/dashboard');
+      }
+    }
+
+    // KYC toggle for testing
+    let kycState = 'pass';
+    function toggleKYC() {
+      kycState = kycState === 'pass' ? 'fail' : 'pass';
+      
+      const badges = ['kyc-identity', 'kyc-aml', 'kyc-wealth', 'kyc-suitability'];
+      badges.forEach(id => {
+        const el = document.getElementById(id);
+        if (kycState === 'pass') {
+          el.className = 'inline-flex px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded-full';
+          el.textContent = 'Pass';
+        } else {
+          el.className = 'inline-flex px-2 py-1 text-xs font-medium bg-red-100 text-red-800 rounded-full';
+          el.textContent = 'Fail';
+        }
+      });
+      
+      showToast(`KYC status updated to ${kycState.toUpperCase()}`);
+    }
+
+    // Proposal edit toggle
+    let proposalEditMode = false;
+    function toggleProposalEdit() {
+      proposalEditMode = !proposalEditMode;
+      
+      const fields = ['proposal-product', 'proposal-amount', 'proposal-remarks'];
+      fields.forEach(id => {
+        const el = document.getElementById(id);
+        if (proposalEditMode) {
+          el.disabled = false;
+          el.classList.remove('bg-gray-50');
+          el.classList.add('bg-white');
+        } else {
+          el.disabled = true;
+          el.classList.add('bg-gray-50');
+          el.classList.remove('bg-white');
+        }
+      });
+      
+      document.getElementById('proposal-edit-btn-text').textContent = proposalEditMode ? 'Save' : 'Edit';
+    }
+
+    // Audit detail
+    function openAuditDetail(detail) {
+      document.getElementById('audit-detail-content').textContent = detail;
+      document.getElementById('modal-audit').classList.remove('hidden');
+    }
+
+    // Toast notification
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = message;
+      toast.classList.remove('hidden');
+      
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3000);
+    }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+      navigateTo('/dashboard');
+      lucide.createIcons();
+    });
+  </script>
+
+
+</body></html>
