@@ -1,0 +1,102 @@
+[
+  {
+    "clientId": "CLI-001",
+    "kyc": "Completed",
+    "suit": "Moderate",
+    "risk": "Medium",
+    "amlo": "Pass",
+    "totalAUM": 500000,
+    "lastReviewDate": "2023-10-15",
+    "nextReviewDate": "2024-10-15"
+  },
+  {
+    "clientId": "CLI-002",
+    "kyc": "Completed",
+    "suit": "Aggressive",
+    "risk": "High",
+    "amlo": "Pass",
+    "totalAUM": 1200000,
+    "lastReviewDate": "2023-09-20",
+    "nextReviewDate": "2024-09-20"
+  },
+  {
+    "clientId": "CLI-003",
+    "kyc": "Completed",
+    "suit": "Conservative",
+    "risk": "Low",
+    "amlo": "Pass",
+    "totalAUM": 300000,
+    "lastReviewDate": "2023-10-05",
+    "nextReviewDate": "2024-10-05"
+  },
+  {
+    "clientId": "CLI-004",
+    "kyc": "Completed",
+    "suit": "Moderate",
+    "risk": "Medium",
+    "amlo": "Pass",
+    "totalAUM": 750000,
+    "lastReviewDate": "2023-11-01",
+    "nextReviewDate": "2024-11-01"
+  },
+  {
+    "clientId": "CLI-005",
+    "kyc": "Completed",
+    "suit": "Aggressive",
+    "risk": "High",
+    "amlo": "Pass",
+    "totalAUM": 2000000,
+    "lastReviewDate": "2023-10-20",
+    "nextReviewDate": "2024-10-20"
+  },
+  {
+    "clientId": "CLI-006",
+    "kyc": "Completed",
+    "suit": "Moderate",
+    "risk": "Medium",
+    "amlo": "Pass",
+    "totalAUM": 600000,
+    "lastReviewDate": "2023-09-15",
+    "nextReviewDate": "2024-09-15"
+  },
+  {
+    "clientId": "CLI-007",
+    "kyc": "Expired",
+    "suit": "Conservative",
+    "risk": "Low",
+    "amlo": "Pass",
+    "totalAUM": 250000,
+    "lastReviewDate": "2022-08-10",
+    "nextReviewDate": "2023-08-10"
+  },
+  {
+    "clientId": "CLI-008",
+    "kyc": "Completed",
+    "suit": "Conservative",
+    "risk": "Low",
+    "amlo": "Pass",
+    "totalAUM": 400000,
+    "lastReviewDate": "2023-10-25",
+    "nextReviewDate": "2024-10-25"
+  },
+  {
+    "clientId": "CLI-009",
+    "kyc": "Pending",
+    "suit": "Moderate",
+    "risk": "Medium",
+    "amlo": "Pending",
+    "totalAUM": 100000,
+    "lastReviewDate": null,
+    "nextReviewDate": null
+  },
+  {
+    "clientId": "CLI-010",
+    "kyc": "Completed",
+    "suit": "Aggressive",
+    "risk": "High",
+    "amlo": "Pass",
+    "totalAUM": 1500000,
+    "lastReviewDate": "2023-11-05",
+    "nextReviewDate": "2024-11-05"
+  }
+]

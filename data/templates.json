@@ -1,0 +1,26 @@
+[
+  {
+    "templateId": "TPL-001",
+    "name": "Standard Investment Offer",
+    "content": "Dear {{clientName}},\n\nThank you for your interest in {{productName}}. We are pleased to present you with the following investment offer:\n\nInvestment Amount: {{investmentAmount}}\nExpected Return: {{expectedReturn}}\nMaturity Date: {{maturityDate}}\n\nTerms and Conditions:\n- This offer is valid for 30 days from the date of issuance\n- Minimum investment period applies\n- Early withdrawal may incur penalties\n\nPlease review the attached product prospectus for complete details.\n\nBest regards,\nWealthOps Team",
+    "isActive": true,
+    "createdAt": "2023-01-15T00:00:00Z",
+    "updatedAt": "2023-01-15T00:00:00Z"
+  },
+  {
+    "templateId": "TPL-002",
+    "name": "Premium Client Offer",
+    "content": "Dear {{clientName}},\n\nAs a valued premium client, we are delighted to present an exclusive investment opportunity in {{productName}}.\n\nExclusive Offer Details:\nInvestment Amount: {{investmentAmount}}\nEnhanced Return: {{expectedReturn}}\nMaturity Date: {{maturityDate}}\n\nPremium Benefits:\n- Priority customer service\n- Quarterly performance reviews\n- Complimentary portfolio analysis\n- Access to exclusive investment webinars\n\nThis premium offer is exclusively available to our select clients and is valid for 30 days.\n\nWarm regards,\nWealthOps Premium Services",
+    "isActive": true,
+    "createdAt": "2023-01-15T00:00:00Z",
+    "updatedAt": "2023-01-15T00:00:00Z"
+  },
+  {
+    "templateId": "TPL-003",
+    "name": "Conservative Investment Offer",
+    "content": "Dear {{clientName}},\n\nBased on your investment profile and preferences for conservative investments, we present this carefully selected opportunity in {{productName}}.\n\nOffer Summary:\nInvestment Amount: {{investmentAmount}}\nStable Return: {{expectedReturn}}\nMaturity Date: {{maturityDate}}\n\nKey Features:\n- Low-risk investment\n- Capital protection focus\n- Predictable returns\n- Regular income distribution\n\nThis conservative investment aligns with your risk profile and financial goals.\n\nSincerely,\nWealthOps Advisory Team",
+    "isActive": true,
+    "createdAt": "2023-01-15T00:00:00Z",
+    "updatedAt": "2023-01-15T00:00:00Z"
+  }
+]

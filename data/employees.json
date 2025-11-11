@@ -1,0 +1,82 @@
+[
+  {
+    "id": "EMP-001",
+    "name": "Admin User",
+    "email": "admin@wealthops.com",
+    "role": "Admin",
+    "department": "Management",
+    "isActive": true,
+    "createdAt": "2023-01-01T00:00:00Z",
+    "updatedAt": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "EMP-002",
+    "name": "Manager One",
+    "email": "manager1@wealthops.com",
+    "role": "Manager",
+    "department": "Sales",
+    "isActive": true,
+    "createdAt": "2023-01-01T00:00:00Z",
+    "updatedAt": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "EMP-003",
+    "name": "Manager Two",
+    "email": "manager2@wealthops.com",
+    "role": "Manager",
+    "department": "Operations",
+    "isActive": true,
+    "createdAt": "2023-01-01T00:00:00Z",
+    "updatedAt": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "EMP-004",
+    "name": "Agent Smith",
+    "email": "agent.smith@wealthops.com",
+    "role": "Agent",
+    "department": "Sales",
+    "isActive": true,
+    "createdAt": "2023-01-01T00:00:00Z",
+    "updatedAt": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "EMP-005",
+    "name": "Agent Johnson",
+    "email": "agent.johnson@wealthops.com",
+    "role": "Agent",
+    "department": "Sales",
+    "isActive": true,
+    "createdAt": "2023-01-01T00:00:00Z",
+    "updatedAt": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "EMP-006",
+    "name": "Agent Williams",
+    "email": "agent.williams@wealthops.com",
+    "role": "Agent",
+    "department": "Sales",
+    "isActive": true,
+    "createdAt": "2023-01-01T00:00:00Z",
+    "updatedAt": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "EMP-007",
+    "name": "Agent Brown",
+    "email": "agent.brown@wealthops.com",
+    "role": "Agent",
+    "department": "Operations",
+    "isActive": true,
+    "createdAt": "2023-01-01T00:00:00Z",
+    "updatedAt": "2023-01-01T00:00:00Z"
+  },
+  {
+    "id": "EMP-008",
+    "name": "Agent Davis",
+    "email": "agent.davis@wealthops.com",
+    "role": "Agent",
+    "department": "Operations",
+    "isActive": false,
+    "createdAt": "2023-01-01T00:00:00Z",
+    "updatedAt": "2023-10-15T00:00:00Z"
+  }
+]
