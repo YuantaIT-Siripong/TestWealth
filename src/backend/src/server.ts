@@ -1,12 +1,15 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import swaggerUi from 'swagger-ui-express';
 import inquiryRoutes from './routes/inquiry.routes.js';
 import offerRoutes from './routes/offer.routes.js';
 import customerProfileRoutes from './routes/customerProfile.routes.js';
 import mockDataRoutes from './routes/mockData.routes.js';
+import healthRoutes from './routes/health.routes.js';
 import { errorHandler } from './middleware/errorHandler.js';
 import { logger } from './utils/logger.js';
+import { swaggerSpec } from './config/swagger.config.js';
 
 const app = express();
 const PORT = 3000;
@@ -30,16 +33,18 @@ app.use((req, _res, next) => {
   next();
 });
 
+// Swagger API Documentation
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  customCss: '.swagger-ui .topbar { display: none }',
+  customSiteTitle: 'WealthOps API Documentation',
+}));
+
 // API Routes
 app.use('/api/inquiries', inquiryRoutes);
 app.use('/api/offers', offerRoutes);
 app.use('/api/customer-profiles', customerProfileRoutes);
 app.use('/api', mockDataRoutes);
-
-// Health check
-app.get('/health', (_req, res) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
-});
+app.use('/', healthRoutes);
 
 // 404 handler
 app.use((_req, res) => {
@@ -58,7 +63,8 @@ app.use(errorHandler);
 // Start server
 app.listen(PORT, () => {
   logger.info(`🚀 Backend server running on http://localhost:${PORT}`);
-  logger.info(`📊 API endpoints:`);
+  logger.info(`� API Documentation: http://localhost:${PORT}/api-docs`);
+  logger.info(`�📊 API endpoints:`);
   logger.info(`   - GET  /api/inquiries`);
   logger.info(`   - POST /api/inquiries`);
   logger.info(`   - GET  /api/offers`);

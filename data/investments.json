@@ -22,8 +22,8 @@
   {
     "clientId": "CLI-003",
     "kyc": "Completed",
-    "suit": "Conservative",
-    "risk": "Low",
+    "suit": "Aggressive",
+    "risk": "High",
     "amlo": "Pass",
     "totalAUM": 300000,
     "lastReviewDate": "2023-10-05",

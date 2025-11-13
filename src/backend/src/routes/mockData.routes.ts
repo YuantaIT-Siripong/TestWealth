@@ -20,19 +20,88 @@ const readMockData = (filename: string) => {
   }
 };
 
-// GET /api/clients
+/**
+ * @openapi
+ * /api/clients:
+ *   get:
+ *     tags:
+ *       - Mock Data
+ *     summary: Get all clients
+ *     description: Retrieve list of all clients (read-only mock data)
+ *     responses:
+ *       200:
+ *         description: List of clients
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Client'
+ */
 router.get('/clients', (_req: Request, res: Response) => {
   const clients = readMockData('clients.json');
   res.json({ success: true, data: clients });
 });
 
-// GET /api/employees
+/**
+ * @openapi
+ * /api/employees:
+ *   get:
+ *     tags:
+ *       - Mock Data
+ *     summary: Get all employees
+ *     description: Retrieve list of all employees (read-only mock data)
+ *     responses:
+ *       200:
+ *         description: List of employees
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Employee'
+ */
 router.get('/employees', (_req: Request, res: Response) => {
   const employees = readMockData('employees.json');
   res.json({ success: true, data: employees });
 });
 
-// GET /api/products
+/**
+ * @openapi
+ * /api/products:
+ *   get:
+ *     tags:
+ *       - Mock Data
+ *     summary: Get all products
+ *     description: Retrieve list of all investment products (read-only mock data)
+ *     responses:
+ *       200:
+ *         description: List of products
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Product'
+ */
 router.get('/products', (_req: Request, res: Response) => {
   const products = readMockData('products.json');
   // Map productCode to id for consistency
@@ -43,13 +112,59 @@ router.get('/products', (_req: Request, res: Response) => {
   res.json({ success: true, data: mappedProducts });
 });
 
-// GET /api/investments
+/**
+ * @openapi
+ * /api/investments:
+ *   get:
+ *     tags:
+ *       - Mock Data
+ *     summary: Get all investments
+ *     description: Retrieve list of all client investment profiles with KYC, AML/O, and suitability data (read-only mock data)
+ *     responses:
+ *       200:
+ *         description: List of investments
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Investment'
+ */
 router.get('/investments', (_req: Request, res: Response) => {
   const investments = readMockData('investments.json');
   res.json({ success: true, data: investments });
 });
 
-// GET /api/templates
+/**
+ * @openapi
+ * /api/templates:
+ *   get:
+ *     tags:
+ *       - Mock Data
+ *     summary: Get all templates
+ *     description: Retrieve list of all document templates (read-only mock data)
+ *     responses:
+ *       200:
+ *         description: List of templates
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 success:
+ *                   type: boolean
+ *                   example: true
+ *                 data:
+ *                   type: array
+ *                   items:
+ *                     $ref: '#/components/schemas/Template'
+ */
 router.get('/templates', (_req: Request, res: Response) => {
   const templates = readMockData('templates.json');
   res.json({ success: true, data: templates });
