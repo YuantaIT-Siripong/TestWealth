@@ -1,0 +1,19 @@
+[
+  {
+    "id": "OFF-20251112-001",
+    "inquiryId": "INQ-20251112-001",
+    "clientId": "CLI-002",
+    "productId": "PROD-002",
+    "investmentAmount": 5000,
+    "expectedReturn": "0% p.a.",
+    "maturityDate": "2026-11-11T17:00:00.000Z",
+    "proposalRemarks": "",
+    "status": "Proposal",
+    "createdBy": "EMP-001",
+    "kycStatus": "Pass",
+    "suitabilityStatus": "Pass",
+    "createdDate": "2025-11-12T03:51:54.885Z",
+    "updatedDate": "2025-11-12T03:51:54.885Z",
+    "expiryDate": "2025-12-12T03:51:54.885Z"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "source": "Web",
+    "clientId": "CLI-002",
+    "productId": "PROD-002",
+    "status": "Converted",
+    "requestedAmount": 5000,
+    "additionalRemark": "",
+    "createdBy": "EMP-001",
+    "assignedTo": "EMP-002",
+    "id": "INQ-20251112-001",
+    "createdDate": "2025-11-12T03:51:45.548Z",
+    "updatedDate": "2025-11-12T03:51:54.888Z"
+  }
+]
