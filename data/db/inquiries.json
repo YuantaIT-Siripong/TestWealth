@@ -57,5 +57,17 @@
     "id": "INQ-20251113-001",
     "createdDate": "2025-11-13T02:57:56.900Z",
     "updatedDate": "2025-11-13T02:57:56.900Z"
+  },
+  {
+    "source": "API",
+    "clientId": "CLI-006",
+    "productId": "PROD-005",
+    "requestedAmount": 50000,
+    "additionalRemark": "",
+    "status": "Draft",
+    "createdBy": "ADMIN001",
+    "id": "INQ-20251113-001",
+    "createdDate": "2025-11-13T04:30:54.886Z",
+    "updatedDate": "2025-11-13T04:30:54.886Z"
   }
 ]

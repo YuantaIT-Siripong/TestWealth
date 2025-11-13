@@ -21,6 +21,22 @@ export default function InquiryList() {
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [editingInquiry, setEditingInquiry] = useState<Inquiry | null>(null);
   const [showEditModal, setShowEditModal] = useState(false);
+  const [orders, setOrders] = useState<any[]>([]);
+  useEffect(() => {
+    // Load orders for linking
+    loadOrders();
+  }, []);
+
+  const loadOrders = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/api/offers');
+      if (response.data.success) {
+        setOrders(response.data.data);
+      }
+    } catch (error) {
+      console.error('Error loading orders:', error);
+    }
+  };
 
   useEffect(() => {
     loadInquiries();
@@ -217,7 +233,13 @@ export default function InquiryList() {
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
-                            // Navigate to the order
+                            // Find the order with matching inquiryId
+                            const order = orders.find(o => o.inquiryId === inquiry.id);
+                            if (order) {
+                              navigate(`/orders/${order.id}`);
+                            } else {
+                              alert('Related order not found.');
+                            }
                           }}
                           className="text-sm text-blue-600 hover:text-blue-700 font-medium"
                         >
