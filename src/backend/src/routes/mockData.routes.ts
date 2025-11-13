@@ -7,9 +7,15 @@ const router = Router();
 // Helper to read mock data
 const readMockData = (filename: string) => {
   try {
+    // The npm script runs from project root, but backend process.cwd() is src/backend
+    // So we need to go up to project root: ../../data/
     const dataPath = join(process.cwd(), '..', '..', 'data', filename);
-    return JSON.parse(readFileSync(dataPath, 'utf-8'));
+    console.log('Reading mock data from:', dataPath);
+    const data = JSON.parse(readFileSync(dataPath, 'utf-8'));
+    console.log(`Successfully loaded ${data.length} records from ${filename}`);
+    return data;
   } catch (error) {
+    console.error(`Error reading ${filename}:`, error);
     return [];
   }
 };

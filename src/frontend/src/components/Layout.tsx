@@ -47,9 +47,9 @@ export default function Layout({ children }: LayoutProps) {
               Inquiries
             </Link>
             <Link
-              to="/offers"
+              to="/orders"
               className={`flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors ${
-                isActive('/offers') || isActive('/offer')
+                isActive('/orders') || isActive('/order')
                   ? 'bg-blue-50 text-blue-600 border-r-2 border-blue-600'
                   : 'text-gray-700 hover:bg-gray-50'
               }`}
@@ -69,7 +69,7 @@ export default function Layout({ children }: LayoutProps) {
             <nav className="text-sm text-gray-500">
               {location.pathname === '/dashboard' && 'Dashboard'}
               {(location.pathname.startsWith('/inquiries') || location.pathname.startsWith('/inquiry')) && 'Order Inquiries'}
-              {(location.pathname.startsWith('/offers') || location.pathname.startsWith('/offer')) && 'Orders'}
+              {(location.pathname.startsWith('/orders') || location.pathname.startsWith('/order')) && 'Orders'}
             </nav>
           </div>
           <div className="flex items-center space-x-4">

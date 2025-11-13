@@ -50,5 +50,22 @@
     "createdDate": "2025-11-13T03:02:50.133Z",
     "updatedDate": "2025-11-13T03:02:50.133Z",
     "expiryDate": "2025-12-13T03:02:50.133Z"
+  },
+  {
+    "id": "OFF-20251113-001",
+    "inquiryId": "INQ-20251112-003",
+    "clientId": "CLI-003",
+    "productId": "PROD-002",
+    "investmentAmount": 75000,
+    "expectedReturn": "0% p.a.",
+    "maturityDate": "2026-11-12T17:00:00.000Z",
+    "proposalRemarks": "",
+    "status": "Proposal",
+    "createdBy": "ADMIN001",
+    "kycStatus": "Pass",
+    "suitabilityStatus": "Fail",
+    "createdDate": "2025-11-13T03:32:20.809Z",
+    "updatedDate": "2025-11-13T03:32:20.809Z",
+    "expiryDate": "2025-12-13T03:32:20.809Z"
   }
 ]

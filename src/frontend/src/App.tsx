@@ -15,8 +15,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/inquiries" element={<InquiryList />} />
           <Route path="/inquiries/:id" element={<InquiryDetail />} />
-          <Route path="/offers" element={<OfferList />} />
-          <Route path="/offers/:id" element={<OfferDetail />} />
+          <Route path="/orders" element={<OfferList />} />
+          <Route path="/orders/:id" element={<OfferDetail />} />
         </Routes>
       </Layout>
     </Router>

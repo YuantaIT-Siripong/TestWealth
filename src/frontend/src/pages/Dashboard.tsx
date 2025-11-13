@@ -119,7 +119,7 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Total Offers */}
+        {/* Total Orders */}
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="p-5">
             <div className="flex items-center">
@@ -129,7 +129,7 @@ export default function Dashboard() {
               <div className="ml-5 w-0 flex-1">
                 <dl>
                   <dt className="text-sm font-medium text-gray-500 truncate">
-                    Total Offers
+                    Total Orders
                   </dt>
                   <dd className="text-3xl font-semibold text-gray-900">
                     {stats.totalOffers}
@@ -139,13 +139,13 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="bg-gray-50 px-5 py-3">
-            <Link to="/offers" className="text-sm font-medium text-blue-600 hover:text-blue-500">
+            <Link to="/orders" className="text-sm font-medium text-blue-600 hover:text-blue-500">
               View all →
             </Link>
           </div>
         </div>
 
-        {/* Sent Offers */}
+        {/* Sent Orders */}
         <div className="bg-white overflow-hidden shadow rounded-lg">
           <div className="p-5">
             <div className="flex items-center">
@@ -155,7 +155,7 @@ export default function Dashboard() {
               <div className="ml-5 w-0 flex-1">
                 <dl>
                   <dt className="text-sm font-medium text-gray-500 truncate">
-                    Sent Offers
+                    Sent Orders
                   </dt>
                   <dd className="text-3xl font-semibold text-gray-900">
                     {stats.sentOffers}
@@ -165,7 +165,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="bg-gray-50 px-5 py-3">
-            <Link to="/offers" className="text-sm font-medium text-blue-600 hover:text-blue-500">
+            <Link to="/orders" className="text-sm font-medium text-blue-600 hover:text-blue-500">
               Manage →
             </Link>
           </div>
@@ -186,12 +186,12 @@ export default function Dashboard() {
             </span>
           </Link>
           <Link
-            to="/offers"
+            to="/orders"
             className="relative block w-full rounded-lg border-2 border-dashed border-gray-300 p-12 text-center hover:border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             <Gift className="mx-auto h-12 w-12 text-gray-400" />
             <span className="mt-2 block text-sm font-medium text-gray-900">
-              Create New Offer
+              Create New Order
             </span>
           </Link>
         </div>

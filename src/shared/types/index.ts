@@ -56,14 +56,16 @@ export type RiskLevel = 'Low' | 'Medium' | 'High';
 export type AMLOStatus = 'Pass' | 'Pending' | 'Fail';
 
 export interface Investment {
-  id: string;
+  id?: string;
   clientId: string;
-  clientName: string;
+  clientName?: string;
   kyc: KYCStatus;
   amlo: AMLOStatus;
   totalAUM: number;
   suit: Suitability;
   risk: RiskLevel;
+  lastReviewDate?: string | null;
+  nextReviewDate?: string | null;
 }
 
 // Template types
@@ -80,6 +82,7 @@ export interface Template {
 export interface Client {
   id: string;
   name: string;
+  cif?: string;
   email: string;
   phone: string;
   address: string;

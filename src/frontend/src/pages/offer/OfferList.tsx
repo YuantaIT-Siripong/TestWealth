@@ -4,15 +4,35 @@ import { Plus, Search } from 'lucide-react';
 import axios from 'axios';
 import type { Offer, OfferStatus } from '@shared/types';
 
+interface Client {
+  id: string;
+  name: string;
+}
+
 export default function OfferList() {
   const [offers, setOffers] = useState<Offer[]>([]);
+  const [clients, setClients] = useState<Client[]>([]);
   const [loading, setLoading] = useState(true);
   const [statusFilter, setStatusFilter] = useState<OfferStatus | 'All'>('All');
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
     loadOffers();
+    loadClients();
   }, []);
+
+  const loadClients = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/api/clients');
+      if (response.data.success) {
+        setClients(response.data.data);
+      } else {
+        setClients(response.data);
+      }
+    } catch (error) {
+      console.error('Error loading clients:', error);
+    }
+  };
 
   const loadOffers = async () => {
     try {
@@ -41,9 +61,16 @@ export default function OfferList() {
     return colors[status] || 'bg-gray-100 text-gray-800';
   };
 
+  const getClientName = (clientId: string) => {
+    const client = clients.find(c => c.id === clientId);
+    return client ? client.name : clientId;
+  };
+
   const filteredOffers = offers.filter(offer => {
     const matchesStatus = statusFilter === 'All' || offer.status === statusFilter;
+    const clientName = getClientName(offer.clientId);
     const matchesSearch = !searchTerm || 
+      clientName.toLowerCase().includes(searchTerm.toLowerCase()) ||
       offer.clientId.toLowerCase().includes(searchTerm.toLowerCase()) ||
       offer.id.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesStatus && matchesSearch;
@@ -57,9 +84,9 @@ export default function OfferList() {
     <div>
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
-          <h1 className="text-2xl font-semibold text-gray-900">Offers</h1>
+          <h1 className="text-2xl font-semibold text-gray-900">Orders</h1>
           <p className="mt-2 text-sm text-gray-700">
-            A list of all offers including their status and details.
+            A list of all orders including their status and details.
           </p>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
@@ -141,7 +168,7 @@ export default function OfferList() {
                       <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900">
                         {offer.id}
                       </td>
-                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{offer.clientId}</td>
+                      <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{getClientName(offer.clientId)}</td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">{offer.productId}</td>
                       <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                         ${offer.investmentAmount.toLocaleString()}
@@ -169,7 +196,7 @@ export default function OfferList() {
                         {new Date(offer.createdDate).toLocaleDateString()}
                       </td>
                       <td className="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-0">
-                        <Link to={`/offers/${offer.id}`} className="text-blue-600 hover:text-blue-900">
+                        <Link to={`/orders/${offer.id}`} className="text-blue-600 hover:text-blue-900">
                           View
                         </Link>
                       </td>

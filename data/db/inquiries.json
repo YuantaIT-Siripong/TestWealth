@@ -29,10 +29,10 @@
     "clientId": "CLI-003",
     "productId": "PROD-002",
     "requestedAmount": 75000,
-    "status": "Pending",
+    "status": "Converted",
     "createdBy": "ADMIN001",
     "createdDate": "2025-11-12T10:15:00.000Z",
-    "updatedDate": "2025-11-12T10:15:00.000Z"
+    "updatedDate": "2025-11-13T03:32:20.812Z"
   },
   {
     "source": "Mobile",
