@@ -15,7 +15,7 @@ export interface Investment {
   kyc: 'Completed' | 'Pending' | 'Expired' | 'Not Started';
   amlo: 'Pass' | 'Pending' | 'Fail';
   totalAUM: number;
-  suit: 'Conservative' | 'Moderate' | 'Aggressive';
+  investment_group: 'Conservative' | 'Moderate' | 'Aggressive';
   risk: 'Low' | 'Medium' | 'High';
 }
 

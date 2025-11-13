@@ -2,7 +2,7 @@
   {
     "clientId": "CLI-001",
     "kyc": "Completed",
-    "suit": "Moderate",
+    "investment_group": "Moderate",
     "risk": "Medium",
     "amlo": "Pass",
     "totalAUM": 500000,
@@ -12,7 +12,7 @@
   {
     "clientId": "CLI-002",
     "kyc": "Completed",
-    "suit": "Aggressive",
+    "investment_group": "Aggressive",
     "risk": "High",
     "amlo": "Pass",
     "totalAUM": 1200000,
@@ -22,7 +22,7 @@
   {
     "clientId": "CLI-003",
     "kyc": "Completed",
-    "suit": "Aggressive",
+    "investment_group": "Aggressive",
     "risk": "High",
     "amlo": "Pass",
     "totalAUM": 300000,
@@ -32,7 +32,7 @@
   {
     "clientId": "CLI-004",
     "kyc": "Completed",
-    "suit": "Moderate",
+    "investment_group": "Moderate",
     "risk": "Medium",
     "amlo": "Pass",
     "totalAUM": 750000,
@@ -42,7 +42,7 @@
   {
     "clientId": "CLI-005",
     "kyc": "Completed",
-    "suit": "Aggressive",
+    "investment_group": "Aggressive",
     "risk": "High",
     "amlo": "Pass",
     "totalAUM": 2000000,
@@ -52,7 +52,7 @@
   {
     "clientId": "CLI-006",
     "kyc": "Completed",
-    "suit": "Moderate",
+    "investment_group": "Moderate",
     "risk": "Medium",
     "amlo": "Pass",
     "totalAUM": 600000,
@@ -62,7 +62,7 @@
   {
     "clientId": "CLI-007",
     "kyc": "Expired",
-    "suit": "Conservative",
+    "investment_group": "Conservative",
     "risk": "Low",
     "amlo": "Pass",
     "totalAUM": 250000,
@@ -72,7 +72,7 @@
   {
     "clientId": "CLI-008",
     "kyc": "Completed",
-    "suit": "Conservative",
+    "investment_group": "Conservative",
     "risk": "Low",
     "amlo": "Pass",
     "totalAUM": 400000,
@@ -82,7 +82,7 @@
   {
     "clientId": "CLI-009",
     "kyc": "Pending",
-    "suit": "Moderate",
+    "investment_group": "Moderate",
     "risk": "Medium",
     "amlo": "Pending",
     "totalAUM": 100000,
@@ -92,7 +92,7 @@
   {
     "clientId": "CLI-010",
     "kyc": "Completed",
-    "suit": "Aggressive",
+    "investment_group": "Aggressive",
     "risk": "High",
     "amlo": "Pass",
     "totalAUM": 1500000,

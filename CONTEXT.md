@@ -71,8 +71,8 @@ Client's investment profile for suitability assessment.
 interface Investment {
   clientId: string;          // Reference to Client
   kyc: 'Completed' | 'Pending' | 'Expired' | 'Not Started';
-  suit: 'Conservative' | 'Moderate' | 'Aggressive';  // Suitability
-  risk: 'Low' | 'Medium' | 'High';
+  investment_group: 'Conservative' | 'Moderate' | 'Aggressive';  // Investment group classification
+  risk: 'Low' | 'Medium' | 'High';  // Client risk level (used for suitability)
   amlo: 'Pass' | 'Pending' | 'Fail';  // Anti-Money Laundering
   totalAUM: number;          // Total Assets Under Management
   lastReviewDate: Date;

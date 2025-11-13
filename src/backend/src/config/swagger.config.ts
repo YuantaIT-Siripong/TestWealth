@@ -28,6 +28,10 @@ const options: swaggerJsdoc.Options = {
         description: 'Investment offer management endpoints',
       },
       {
+        name: 'Suitability',
+        description: 'Suitability checking and validation endpoints',
+      },
+      {
         name: 'Mock Data',
         description: 'Read-only endpoints for reference data (clients, products, templates, etc.)',
       },

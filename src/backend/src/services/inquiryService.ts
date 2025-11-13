@@ -9,17 +9,32 @@ const __dirname = dirname(__filename);
 
 // File-based storage for inquiries
 const storage = new FileStorage<Inquiry>('inquiries.json');
-let inquiryCounter = 1;
 
 // Generate inquiry ID in format: INQ-YYYYMMDD-XXX
-const generateInquiryId = (): string => {
+const generateInquiryId = async (): Promise<string> => {
   const now = new Date();
   const year = now.getFullYear();
   const month = String(now.getMonth() + 1).padStart(2, '0');
   const day = String(now.getDate()).padStart(2, '0');
-  const sequence = String(inquiryCounter++).padStart(3, '0');
+  const datePrefix = `INQ-${year}${month}${day}`;
   
-  return `INQ-${year}${month}${day}-${sequence}`;
+  // Read existing inquiries to find the highest sequence number for today
+  const existingInquiries = await storage.read();
+  const todayInquiries = existingInquiries.filter(inq => inq.id.startsWith(datePrefix));
+  
+  let maxSequence = 0;
+  todayInquiries.forEach(inq => {
+    const match = inq.id.match(/INQ-\d{8}-(\d{3})/);
+    if (match) {
+      const sequence = parseInt(match[1], 10);
+      if (sequence > maxSequence) {
+        maxSequence = sequence;
+      }
+    }
+  });
+  
+  const nextSequence = String(maxSequence + 1).padStart(3, '0');
+  return `${datePrefix}-${nextSequence}`;
 };
 
 // Get all inquiries with optional filters
@@ -57,7 +72,7 @@ export const createInquiry = async (data: Omit<Inquiry, 'id' | 'createdDate' | '
   
   const inquiry: Inquiry = {
     ...data,
-    id: generateInquiryId(),
+    id: await generateInquiryId(),
     status: data.status || 'Draft',
     createdDate: now,
     updatedDate: now,

@@ -9,7 +9,6 @@ const __dirname = dirname(__filename);
 
 // File-based storage for offers
 const storage = new FileStorage<Offer>('offers.json');
-let offerCounter = 1;
 
 // Read investments data
 const readInvestments = (): Investment[] => {
@@ -19,14 +18,30 @@ const readInvestments = (): Investment[] => {
 };
 
 // Generate offer ID in format: OFF-YYYYMMDD-XXX
-const generateOfferId = (): string => {
+const generateOfferId = async (): Promise<string> => {
   const now = new Date();
   const year = now.getFullYear();
   const month = String(now.getMonth() + 1).padStart(2, '0');
   const day = String(now.getDate()).padStart(2, '0');
-  const sequence = String(offerCounter++).padStart(3, '0');
+  const datePrefix = `OFF-${year}${month}${day}`;
   
-  return `OFF-${year}${month}${day}-${sequence}`;
+  // Read existing offers to find the highest sequence number for today
+  const existingOffers = await storage.read();
+  const todayOffers = existingOffers.filter(offer => offer.id.startsWith(datePrefix));
+  
+  let maxSequence = 0;
+  todayOffers.forEach(offer => {
+    const match = offer.id.match(/OFF-\d{8}-(\d{3})/);
+    if (match) {
+      const sequence = parseInt(match[1], 10);
+      if (sequence > maxSequence) {
+        maxSequence = sequence;
+      }
+    }
+  });
+  
+  const nextSequence = String(maxSequence + 1).padStart(3, '0');
+  return `${datePrefix}-${nextSequence}`;
 };
 
 // Validate KYC & Suitability from investment data
@@ -45,15 +60,17 @@ const validateKYCAndSuitability = (clientId: string, productRiskLevel: string): 
     // KYC check: Both KYC and AMLO must pass
     const kycStatus = (investment.kyc === 'Completed' && investment.amlo === 'Pass') ? 'Pass' : 'Fail';
     
-    // Suitability check: Match client risk profile with product
-    const suitabilityMap: Record<string, string[]> = {
-      'Conservative': ['Low'],
-      'Moderate': ['Low', 'Medium'],
-      'Aggressive': ['Low', 'Medium', 'High']
+    // Suitability check: Compare client risk level to product risk level
+    // Rule: Client risk level must be >= product risk level
+    const riskLevelValue: Record<string, number> = {
+      'Low': 1,
+      'Medium': 2,
+      'High': 3
     };
     
-    const allowedRisks = suitabilityMap[investment.suit] || [];
-    const suitabilityStatus = allowedRisks.includes(productRiskLevel) ? 'Pass' : 'Fail';
+    const clientRiskValue = riskLevelValue[investment.risk] || 0;
+    const productRiskValue = riskLevelValue[productRiskLevel] || 999;
+    const suitabilityStatus = clientRiskValue >= productRiskValue ? 'Pass' : 'Fail';
     
     return { kycStatus, suitabilityStatus };
   } catch (error) {
@@ -100,7 +117,7 @@ export const createOfferFromInquiry = async (inquiry: Inquiry, productRiskLevel:
   const { kycStatus, suitabilityStatus } = validateKYCAndSuitability(inquiry.clientId, productRiskLevel);
   
   const offer: Offer = {
-    id: generateOfferId(),
+    id: await generateOfferId(),
     inquiryId: inquiry.id,
     clientId: inquiry.clientId,
     productId: inquiry.productId,
@@ -129,7 +146,7 @@ export const createOffer = async (data: Omit<Offer, 'id' | 'createdDate' | 'upda
   
   const offer: Offer = {
     ...data,
-    id: generateOfferId(),
+    id: await generateOfferId(),
     createdDate: now,
     updatedDate: now,
   };

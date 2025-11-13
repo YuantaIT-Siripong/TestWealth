@@ -62,7 +62,7 @@ export interface Investment {
   kyc: KYCStatus;
   amlo: AMLOStatus;
   totalAUM: number;
-  suit: Suitability;
+  investment_group: Suitability;
   risk: RiskLevel;
   lastReviewDate?: string | null;
   nextReviewDate?: string | null;

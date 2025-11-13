@@ -19,12 +19,16 @@ interface Product {
   name: string;
   productCode: string;
   description: string;
+  riskLevel: 'Low' | 'Medium' | 'High';
+  category: string;
+  expectedReturn: string;
+  minInvestment: number;
 }
 
 interface Investment {
   clientId: string;
   kyc: 'Completed' | 'Pending' | 'Expired' | 'Not Started';
-  suit: 'Conservative' | 'Moderate' | 'Aggressive';
+  investment_group: 'Conservative' | 'Moderate' | 'Aggressive';
   risk: 'Low' | 'Medium' | 'High';
   amlo: 'Pass' | 'Pending' | 'Fail';
   totalAUM: number;
@@ -309,8 +313,8 @@ export default function OfferDetail() {
                         </span>
                       </div>
                       <div className="flex items-center justify-between">
-                        <span className="text-xs text-gray-600">Risk Profile</span>
-                        <span className="text-xs font-medium text-gray-900">{investment?.suit || 'N/A'}</span>
+                        <span className="text-xs text-gray-600">Investment Group</span>
+                        <span className="text-xs font-medium text-gray-900">{investment?.investment_group || 'N/A'}</span>
                       </div>
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-gray-600">Total AUM</span>
@@ -376,8 +380,8 @@ export default function OfferDetail() {
                 <h3 className="text-sm font-semibold text-gray-900 mb-4">Client Risk Profile</h3>
                 <div className="grid grid-cols-2 gap-6">
                   <div>
-                    <dt className="text-xs text-gray-500 mb-1">Risk Appetite</dt>
-                    <dd className="text-sm font-medium text-gray-900">{investment?.suit || 'N/A'}</dd>
+                    <dt className="text-xs text-gray-500 mb-1">Investment Group</dt>
+                    <dd className="text-sm font-medium text-gray-900">{investment?.investment_group || 'N/A'}</dd>
                   </div>
                   <div>
                     <dt className="text-xs text-gray-500 mb-1">Risk Level</dt>
@@ -471,7 +475,7 @@ export default function OfferDetail() {
                       <div>
                         <p className="text-sm font-medium text-gray-900">Suitability Assessment</p>
                         <p className="text-xs text-gray-500">
-                          Risk profile: {investment?.suit || 'N/A'} | Product risk: {investment?.risk || 'N/A'}
+                          Investment group: {investment?.investment_group || 'N/A'} | Client risk: {investment?.risk || 'N/A'} | Product risk: {product?.riskLevel || 'N/A'}
                         </p>
                       </div>
                     </div>

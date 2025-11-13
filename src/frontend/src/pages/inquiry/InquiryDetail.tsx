@@ -18,7 +18,8 @@ interface Product {
 interface Investment {
   clientId: string;
   kyc: string;
-  suitability: string;
+  investment_group: string;
+  risk: string;
   totalAUM: number;
 }
 
@@ -243,8 +244,12 @@ export default function InquiryDetail() {
                 </span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-xs text-gray-600">Risk Profile</span>
-                <span className="text-xs font-medium text-gray-900">{investment?.suitability || 'N/A'}</span>
+                <span className="text-xs text-gray-600">Investment Group</span>
+                <span className="text-xs font-medium text-gray-900">{investment?.investment_group || 'N/A'}</span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-gray-600">Risk Level</span>
+                <span className="text-xs font-medium text-gray-900">{investment?.risk || 'N/A'}</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-xs text-gray-600">Total AUM</span>
